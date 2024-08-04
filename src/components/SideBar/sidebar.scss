@@ -5,7 +5,7 @@
     justify-content: center;
     background-color: black;
     color: white;
-
+    
     .bg {
         position: fixed;
         top: 0;
@@ -13,6 +13,7 @@
         bottom: 0 ;
         width: 400px;
         background-color: #111;
+        z-index: 999;
 
         .links {
             position: absolute;
@@ -32,6 +33,7 @@
     }
 
     button {
+        z-index: 999;
         width: 50px;
         height: 50px;
         border-radius: 50%;

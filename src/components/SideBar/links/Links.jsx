@@ -14,7 +14,7 @@ const variants = {
   },
 };
 
-const itemsVariants = {
+const itemVariants = {
   open: {
     y: 0,
     opacity: 1
@@ -26,19 +26,26 @@ const itemsVariants = {
 };
 
 export const Links = () => {
-  const items = ["Home", "Serviços", "Portfólio", "Contatos", "Sobre"];
+  
+  const items = [
+    { name: "Home", htmlId: "Home" },
+    { name: "Serviços", htmlId: "Servicos" },
+    { name: "Portfólio", htmlId: "Portfolio" },
+    { name: "Contatos", htmlId: "Contatos" },
+    { name: "Sobre", htmlId: "Sobre" }
+  ];
 
   return (
     <motion.div className="links" variants={variants}>
       {items.map((item) => (
         <motion.a
-          href={`#${item.toLowerCase()}`}
-          key={item}
-          variants={itemsVariants}
+          href={`#${item.htmlId}`}
+          key={item.htmlId}
+          variants={itemVariants}
           whileHover={{scale: 1.1}} 
           whileTap={{scale: 0.9}}
         >
-          {item}
+          {item.name}
         </motion.a>
       ))}
     </motion.div>

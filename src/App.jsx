@@ -1,19 +1,26 @@
 import "./app.scss"
 import { Hero } from "./components/Hero/Hero";
+import { Parallax } from "./components/Parallax/Parallax";
 import NavBar from "./components/NavBar/NavBar"
+
+["Home", "Serviços", "Portfólio", "Contatos", "Sobre"]
 
 const App = () => {
   return <div>
-    <section id="home">
+    <section id="Home">
       <NavBar/>
       <Hero/>
     </section>
-    <section >Parallax</section>
-    <section id="serviços">Services</section>
-    <section >Paralax</section>
-    <section id="portfólio">Portfolio1</section>
-    <section id="contatos">Contact</section>
-    <section id="sobre">Sobre</section>
+    <section >
+      <Parallax type="services"/>
+    </section>
+    <section id="Servicos">Services</section>
+    <section >
+    <Parallax type="portfolio"/>
+    </section>
+    <section id="Portfolio">Portfolio1</section>
+    <section id="Contatos">Contact</section>
+    <section id="Sobre">Sobre</section>
   </div>;
 };
 

@@ -38,21 +38,6 @@ const sliderVariants = {
   },
 };
 
-const btnVariants = {
-  initial: {
-    x: -500,
-    opacity: 0,
-  },
-  animate: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 1,
-      staggerChildren: 0.1,
-    },
-  },
-};
-
 const imageVariants = {
   initial: {
     x: 500,
@@ -70,7 +55,8 @@ const imageVariants = {
 
 export const Hero = () => {
   return (
-    <motion.div className="hero">
+    <div>
+      <div className="hero">
       <div className="wrapper">
         <motion.div
           className="textContainer"
@@ -83,24 +69,18 @@ export const Hero = () => {
             Desenvolvedor de Software Full-Stack
           </motion.h1>
           <motion.div
-            variants={btnVariants}
-            initial="initial"
-            animate="animate"
+            variants={textVariants}
             className="buttons"
           >
             <motion.button
-              variants={btnVariants}
-              initial="initial"
-              animate="animate"
+              variants={textVariants}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
               Ver Projetos
             </motion.button>
             <motion.button
-              variants={btnVariants}
-              initial="initial"
-              animate="animate"
+              variants={textVariants}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -119,13 +99,11 @@ export const Hero = () => {
       <motion.div
         className="sliddingTextContainer"
         variants={sliderVariants}
-        initial="initial"
-        animate="animate"
       >
         Desenvolvedor . Músico . Sound Desingner
       </motion.div>
 
-      <div className="imageContainer">
+      <motion.div variants={imageVariants} className="imageContainer">
         <motion.img
           variants={imageVariants}
           initial="initial"
@@ -133,7 +111,10 @@ export const Hero = () => {
           src="/hero-vmake.png"
           alt="HERO-IMG"
         />
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
+    </div>
   );
 };
+
+
