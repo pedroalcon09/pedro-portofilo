@@ -29,7 +29,7 @@ export const Links = () => {
   
   const items = [
     { name: "Home", htmlId: "Home" },
-    { name: "Serviços", htmlId: "Servicos" },
+    { name: "Habilidades", htmlId: "Habilidades" },
     { name: "Portfólio", htmlId: "Portfolio" },
     { name: "Contatos", htmlId: "Contatos" },
     { name: "Sobre", htmlId: "Sobre" }

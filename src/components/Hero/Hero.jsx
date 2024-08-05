@@ -25,10 +25,10 @@ const textVariants = {
 };
 
 const sliderVariants = {
-  initial: {
+  start: {
     x: 0,
   },
-  animate: {
+  animation: {
     x: "-220%",
     transition: {
       duration: 20,
@@ -57,64 +57,57 @@ export const Hero = () => {
   return (
     <div>
       <div className="hero">
-      <div className="wrapper">
-        <motion.div
-          className="textContainer"
-          variants={textVariants}
-          initial="initial"
-          animate="animate"
-        >
-          <motion.h2 variants={textVariants}>Pedro Alcon</motion.h2>
-          <motion.h1 variants={textVariants}>
-            Desenvolvedor de Software Full-Stack
-          </motion.h1>
+        <div className="wrapper">
           <motion.div
+            className="textContainer"
             variants={textVariants}
-            className="buttons"
+            initial="initial"
+            animate="animate"
           >
-            <motion.button
+            <motion.h2 variants={textVariants}>Pedro Alcon</motion.h2>
+            <motion.h1 variants={textVariants}>
+              Desenvolvedor de Software Full-Stack
+            </motion.h1>
+            <motion.div variants={textVariants} className="buttons">
+              <motion.button
+                variants={textVariants}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                Ver Projetos
+              </motion.button>
+              <motion.button
+                variants={textVariants}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                Fale Comigo
+              </motion.button>
+            </motion.div>
+            <motion.img
               variants={textVariants}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              Ver Projetos
-            </motion.button>
-            <motion.button
-              variants={textVariants}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              Fale Comigo
-            </motion.button>
+              animate="animate"
+              initial="initial"
+              src="/scroll.png"
+              alt=""
+            />
           </motion.div>
+        </div>
+
+        <motion.div
+          className="sliddingTextContainer"
+        >
+          Desenvolvedor . Músico . Sound Desingner
+        </motion.div>
+
+        <motion.div variants={imageVariants} className="imageContainer" initial="initial" animate="animate">
           <motion.img
-            variants={textVariants}
-            animate="scrollButton"
-            src="/scroll.png"
-            alt=""
+            variants={imageVariants}
+            src="/hero-vmake.png"
+            alt="HERO-IMG"
           />
         </motion.div>
       </div>
-
-      <motion.div
-        className="sliddingTextContainer"
-        variants={sliderVariants}
-      >
-        Desenvolvedor . Músico . Sound Desingner
-      </motion.div>
-
-      <motion.div variants={imageVariants} className="imageContainer">
-        <motion.img
-          variants={imageVariants}
-          initial="initial"
-          animate="animate"
-          src="/hero-vmake.png"
-          alt="HERO-IMG"
-        />
-      </motion.div>
-    </div>
     </div>
   );
 };
-
-

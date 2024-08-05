@@ -11,8 +11,12 @@ export const Parallax = ({ type }) => {
   });
 
   const textBg = useTransform(scrollYProgress, [0, 1], ["0%", "300%"]);
+
   const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+
   const yPlanets = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+
+  const yPlanetsNeg = useTransform(scrollYProgress, [0, 1], ["0%", "-30%"]);
 
 
   return (
@@ -32,8 +36,8 @@ export const Parallax = ({ type }) => {
       <motion.div className="mountains"></motion.div>
       <motion.div
         style={{
-          y: yPlanets,
-          x: yPlanets,
+          y: type === "services" ? yPlanetsNeg : yPlanets,
+          x: type === "services" ? yPlanetsNeg : yPlanets,
           backgroundImage: `url(${
             type === "services" ? "planets.png" : "sun.png"
           })`,
