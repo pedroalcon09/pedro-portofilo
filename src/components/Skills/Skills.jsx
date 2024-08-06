@@ -2,34 +2,6 @@ import "./skills.scss";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Container, Row, Col } from "react-bootstrap";
-import js from "../../imgs/js.png";
-import world from "../../imgs/world.png";
-import foto from "../../imgs/foto.jpg";
-import node from "../../imgs/node.png";
-import ts from "../../imgs/ts.png";
-import typeorm from "../../imgs/typeorm.png";
-import python from "../../imgs/python.png";
-import pg from "../../imgs/pg.png";
-import postman from "../../imgs/postman.png";
-import jest from "../../imgs/jest.png";
-import django from "../../imgs/django.png";
-import bootstrap from "../../imgs/bootstrap.svg";
-import docker from "../../imgs/docker.png";
-import react from "../../imgs/react.png";
-import html from "../../imgs/html.png";
-import css from "../../imgs/css.png";
-import sql from "../../imgs/sql.png";
-import vscode from "../../imgs/vscode.png";
-import git from "../../imgs/git.png";
-import pytest from "../../imgs/pytest.png";
-import heroku from "../../imgs/heroku.png";
-import vercel from "../../imgs/vercel.png";
-import trello from "../../imgs/trello.png";
-import clickup from "../../imgs/clickup.png";
-import wappler from "../../imgs/wappler.png";
-import beekeeper from "../../imgs/beekeeper.png";
-import leaflet from "../../imgs/leaflet.png";
-import google from "../../imgs/google.png";
 import { skills } from "../../data/skills";
 
 import {
@@ -48,6 +20,7 @@ import {
 } from "react-icons/si";
 
 export const Skills = () => {
+  
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -82,6 +55,8 @@ export const Skills = () => {
     SiBootstrap: SiBootstrap,
     SiGit: SiGit,
   };
+
+  
 
   return (
     <div className="skills">
@@ -123,6 +98,7 @@ export const Skills = () => {
           </Col>
         </Row>
       </Container>
+
     </div>
   );
 };

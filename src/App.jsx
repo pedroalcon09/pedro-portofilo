@@ -3,6 +3,7 @@ import { Hero } from "./components/Hero/Hero";
 import { Parallax } from "./components/Parallax/Parallax";
 import { Skills } from "./components/Skills/Skills";
 import NavBar from "./components/NavBar/NavBar"
+import { Sobre } from "./components/Sobre/Sobre";
 
 ["Home", "Serviços", "Portfólio", "Contatos", "Sobre"]
 
@@ -12,7 +13,9 @@ const App = () => {
       <NavBar/>
       <Hero/>
     </section>
-    <section id="Sobre">Sobre</section>
+    <section id="Sobre">
+      <Sobre/>
+    </section>
     <section >
       <Parallax type="services"/>
     </section>
