@@ -21,6 +21,7 @@ import leaflet from "../../imgs/leaflet.png";
 import google from "../../imgs/google.png";
 import { useRef } from "react";
 import { motion, useDragControls } from "framer-motion";
+import { GiStarSwirl } from "react-icons/gi";
 
 export const Sobre = () => {
   const controls = useDragControls();
@@ -37,12 +38,12 @@ export const Sobre = () => {
     { img: "pg", src: pg, s: 0.8, x: 276, y: 256 },
     { img: "postman", src: postman, s: 0.8, x: 210, y: 765 },
     { img: "jest", src: jest, s: 0.8, x: 444, y: 193 },
-    { img: "django", src: django, s: 0.8, x: 545, y: 387 },
+    { img: "django", src: django, s: 0.8, x: 545, y: 787 },
     { img: "bootstrap", src: bootstrap, s: 1.2, x: 1603, y: 193 },
     { img: "docker", src: docker, s: 1.2, x: 907, y: 88 },
     { img: "react", src: react, s: 1.2, x: 1633, y: 820 },
     { img: "html", src: html, s: 1.2, x: 1123, y: 60 },
-    { img: "css", src: css, s: 1.2, x: 1129, y: 357 },
+    { img: "css", src: css, s: 1.2, x: 1529, y: 357 },
     { img: "sql", src: sql, s: 0.7, x: 1440, y: 1342 },
     { img: "vscode", src: vscode, s: 0.7, x: 929, y: 1293 },
     { img: "git", src: git, s: 0.7, x: 2135, y: 1698 },
@@ -51,12 +52,17 @@ export const Sobre = () => {
     { img: "clickup", src: clickup, s: 1.6, x: 100, y: 833 },
     { img: "wappler", src: wappler, s: 1.6, x: 773, y: 648 },
     { img: "leaflet", src: leaflet, s: 1.4, x: 1423, y: 744 },
-    { img: "google", src: google, s: 0.6, x: 901, y: 385 },
+    { img: "google", src: google, s: 0.6, x: 301, y: 385 },
   ];
   return (
     <div className="sobre">
       <div className="sobre-text">
         <h1>Sobre Mim</h1>
+        <div className="division">
+          <div className="line-div" />
+          <GiStarSwirl />
+          <div className="line-div" />
+        </div>
         <p>
           Tenho 26 anos, sou de São Paulo capital, trabalho como desenvolvedor
           full-stack há 2 anos após uma adição de carreira. Sou formado em
