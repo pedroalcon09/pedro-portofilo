@@ -36,7 +36,7 @@ export const Links = () => {
   ];
 
   return (
-    <motion.div className="links" variants={variants}>
+    <motion.div className="navigation_links" variants={variants}>
       {items.map((item) => (
         <motion.a
           href={`#${item.htmlId}`}

@@ -9,15 +9,15 @@ export const projetos = {
         link: "https://kenzie-academy-brasil-developers.github.io/m2-entrega-torre-de-hanoi-sprint-1a-pedroalcon09/",
         repo: "https://github.com/pedroalcon09/m2-entrega-torre-de-hanoi-sprint-1a-pedroalcon09",
       },
-      {
-        id: 4,
-        title: "E-commerce genérico",
-        img: "../imgs/commerce.png",
-        description:
-          "Meu primeiro e-commerce, apenas com funcionalidade de adicionar e remover do carrinho feito com DOM.",
-        link: "https://pedroalcon09.github.io/m1-entrega-s4-ecommerce-parte-dois-pedroalcon09/#",
-        repo: "https://github.com/pedroalcon09/m1-entrega-s4-ecommerce-parte-dois-pedroalcon09",
-      },
+      // {
+      //   id: 4,
+      //   title: "E-commerce genérico",
+      //   img: "../imgs/commerce.png",
+      //   description:
+      //     "Meu primeiro e-commerce, apenas com funcionalidade de adicionar e remover do carrinho feito com DOM.",
+      //   link: "https://pedroalcon09.github.io/m1-entrega-s4-ecommerce-parte-dois-pedroalcon09/#",
+      //   repo: "https://github.com/pedroalcon09/m1-entrega-s4-ecommerce-parte-dois-pedroalcon09",
+      // },
       {
         id: 5,
         title: "Jogo da Velha",
@@ -45,15 +45,15 @@ export const projetos = {
         link: "https://diskenzietrademusic.vercel.app/home",
         repo: "https://github.com/pedroalcon09/capstone-m3-dtm",
       },
-      {
-        id: 8,
-        title: "Formulário de Cadastro",
-        img: "../imgs/form.png",
-        description:
-          "Feito com react utilizando as livrarias react-hook-form e yup. Formulario de cadastro simples com validação de informação",
-        link: "https://m3-sp2-atvd16.vercel.app/",
-        repo: "https://github.com/pedroalcon09/react-entrega-s2-formulario-de-cadastro-pedroalcon09",
-      },
+      // {
+      //   id: 8,
+      //   title: "Formulário de Cadastro",
+      //   img: "../imgs/form.png",
+      //   description:
+      //     "Feito com react utilizando as livrarias react-hook-form e yup. Formulario de cadastro simples com validação de informação",
+      //   link: "https://m3-sp2-atvd16.vercel.app/",
+      //   repo: "https://github.com/pedroalcon09/react-entrega-s2-formulario-de-cadastro-pedroalcon09",
+      // },
       {
         id: 9,
         title: "Páginas de personagens",
@@ -92,6 +92,14 @@ export const projetos = {
       }
     ],
     BACKEND: [
+      {
+        id: 20,
+        title: "BuiltGrid Search Network",
+        img: "../imgs/bgd.png",
+        description:
+          "Meu primeiro projeto profissional, feito em conjunto com mais dois desenvolvedores. Usado para listar fornecedores para empresas de construção civil na Australia.",
+        link: "https://search.builtgrid.com/",
+      },
       {
         id: 14,
         title: "Produtos e categorias",
@@ -138,16 +146,6 @@ export const projetos = {
         description:
           "Um sistema de cadastro de filmes e de reviews com usuários administradores e comuns com login e autenticações de segurança.",
         repo: "https://github.com/pedroalcon09/m5-sprint4-kmdb-pedroalcon09",
-      },
-    ],
-    FULLSTACK: [
-      {
-        id: 20,
-        title: "BuiltGrid Search Network",
-        img: "../imgs/bgd.png",
-        description:
-          "Meu primeiro projeto como programador atuante, um diretório pensado pela empresa onde trabalho, feito em conjunto com mais dois desenvolvedores. Pensado para listar fornecedores de forma rápida e eficaz para empresas de construção civil no sul da Australia.",
-        link: "https://search.builtgrid.com/",
       },
     ],
     AUDIO: [

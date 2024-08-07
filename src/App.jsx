@@ -5,6 +5,7 @@ import { Skills } from "./components/Skills/Skills";
 import NavBar from "./components/NavBar/NavBar"
 import { Sobre } from "./components/Sobre/Sobre";
 import { Projects } from "./components/Projects/Projects";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 ["Home", "Serviços", "Portfólio", "Contatos", "Sobre"]
 

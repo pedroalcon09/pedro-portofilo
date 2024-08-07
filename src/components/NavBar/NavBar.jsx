@@ -22,7 +22,7 @@ const NavBar = () => {
   ];
 
   return (
-    <div className="navbar">
+    <div className="navigation-bar">
       <SideBar />
       <div className="wrapper">
         <span>

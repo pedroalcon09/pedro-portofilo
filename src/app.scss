@@ -14,18 +14,18 @@ html{
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+    text-decoration: none !important;
+    color: inherit !important;
 }
 
 body {
-    background-color: #ccc;
-    color: black;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
+    background-color: #ccc !important;
+    color: black !important;
+    scroll-snap-type: y mandatory !important;
+    scroll-behavior: smooth  !important;
 }
 
 section {
-    height:100vh;
+    height:100vh ;
     scroll-snap-align: center;
 }

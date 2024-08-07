@@ -81,7 +81,7 @@ export const Skills = () => {
                   const IconComponent = iconMap[skill.icon];
 
                   return (
-                    <div className="skill-container">
+                    <div key={index} className="skill-container">
                       <div className="item" key={index}>
                         <div className="purple-circle">
                           <IconComponent />
