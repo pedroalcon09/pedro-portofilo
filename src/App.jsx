@@ -4,6 +4,7 @@ import { Parallax } from "./components/Parallax/Parallax";
 import { Skills } from "./components/Skills/Skills";
 import NavBar from "./components/NavBar/NavBar"
 import { Sobre } from "./components/Sobre/Sobre";
+import { Projects } from "./components/Projects/Projects";
 
 ["Home", "Serviços", "Portfólio", "Contatos", "Sobre"]
 
@@ -25,7 +26,9 @@ const App = () => {
     <section >
     <Parallax type="portfolio"/>
     </section>
-    <section id="Portfolio">Portfolio1</section>
+    <section id="Portfolio">
+      <Projects/>
+    </section>
     <section id="Contatos">Contact</section>
   </div>;
 };

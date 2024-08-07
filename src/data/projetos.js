@@ -9,24 +9,6 @@ export const projetos = {
         link: "https://kenzie-academy-brasil-developers.github.io/m2-entrega-torre-de-hanoi-sprint-1a-pedroalcon09/",
         repo: "https://github.com/pedroalcon09/m2-entrega-torre-de-hanoi-sprint-1a-pedroalcon09",
       },
-      // {
-      //   id: 2,
-      //   title: "Quadro de Medalhas",
-      //   img: "../imgs/medalhas.png",
-      //   description:
-      //     "Um outro projeto mais robusto envolvendo consumo de APIs, filtros e pesquisa, somente com JavaScript.",
-      //   link: "https://kenzie-academy-brasil-developers.github.io/extra-quadro-medalhas-m2-sprint-3a-pedroalcon09/",
-      //   repo: "https://github.com/pedroalcon09/extra-quadro-medalhas-m2-sprint-3a-pedroalcon09",
-      // },
-      // {
-      //   id: 3,
-      //   title: "Jogos de Azar",
-      //   img: "../imgs/zeca.png",
-      //   description:
-      //     "Um caça-palavras e um caça níquel, ambos feitos com HTML, CSS, JavaScript puros.",
-      //   link: "https://pedroalcon09.github.io/m1-entrega-s4-entrega-construa-um-jogo-de-azar-vitorggg/",
-      //   repo: "https://github.com/pedroalcon09/m1-entrega-s4-entrega-construa-um-jogo-de-azar-vitorggg",
-      // },
       {
         id: 4,
         title: "E-commerce genérico",
@@ -110,17 +92,10 @@ export const projetos = {
       }
     ],
     BACKEND: [
-      // {
-      //   id: 13,
-      //   title: "Sistema de usuários",
-      //   tools: ["node"],
-      //   description: "Meu primeiro CRUD com sistema de login e autenticação.",
-      //   repo: "https://github.com/pedroalcon09/m4-entrega-sprint1-pedroalcon09",
-      // },
       {
         id: 14,
         title: "Produtos e categorias",
-        tools: ["docker", "node", "pg", "jest"],
+        img: '../imgs/prodCat.jpg',
         description:
           "Dois CRUDs, um de produtos e outro de categorias que se relacionam de forma 1:N",
         repo: "https://github.com/pedroalcon09/m4_sprint4-entrega-pedroalcon09",
@@ -128,14 +103,14 @@ export const projetos = {
       {
         id: 15,
         title: "Usuários com TypeORM",
-        tools: ["ts", "node"],
+        img: '../imgs/users.jpg',
         description: "Um CRUD  de usuários simples.",
         repo: "https://github.com/pedroalcon09/sprint5-entrega-pedroalcon09",
       },
       {
         id: 16,
         title: "E-commerce",
-        tools: ["ts", "node", "pg", "jest"],
+        img: '../imgs/ecomm.jpg',
         description:
           "Um sistema de backend completo com sistema de segurança, login, criação de usários vendedores e compradores e cadastros de produtos.",
         repo: "https://github.com/pedroalcon09/capstone-M4-makeMarket",
@@ -143,7 +118,7 @@ export const projetos = {
       {
         id: 17,
         title: "Empresa",
-        tools: ["python", "pytest"],
+        img: '../imgs/empresa.jpg',
         description:
           "Um sistema de backend para uma empresa com holerites, cadastro de funcionarios, gerentes, contratações e demissões.",
         repo: "https://github.com/pedroalcon09/m5-sprint2-empresa-pedroalcon09",
@@ -151,7 +126,7 @@ export const projetos = {
       {
         id: 18,
         title: "Kenzie Pet",
-        tools: ["python", "django"],
+        img: '../imgs/petshop.jpg',
         description:
           "Um CRUD para de pets com raças e características utilizando o rest framework do Django.",
         repo: "https://github.com/pedroalcon09/m5-sprint3-kenzie-pet-pedroalcon09",
@@ -159,13 +134,13 @@ export const projetos = {
       {
         id: 19,
         title: "Kenzie Movie DB",
-        tools: ["python", "django"],
+        img: '../imgs/movie.jpg',
         description:
           "Um sistema de cadastro de filmes e de reviews com usuários administradores e comuns com login e autenticações de segurança.",
         repo: "https://github.com/pedroalcon09/m5-sprint4-kmdb-pedroalcon09",
       },
     ],
-    PROFISSIONAL: [
+    FULLSTACK: [
       {
         id: 20,
         title: "BuiltGrid Search Network",
@@ -174,6 +149,23 @@ export const projetos = {
           "Meu primeiro projeto como programador atuante, um diretório pensado pela empresa onde trabalho, feito em conjunto com mais dois desenvolvedores. Pensado para listar fornecedores de forma rápida e eficaz para empresas de construção civil no sul da Australia.",
         link: "https://search.builtgrid.com/",
       },
+    ],
+    AUDIO: [
+      {
+        title: "Sound Design & Foley",
+        video: "https://player.vimeo.com/video/427502102?h=cf2ee68071",
+        description: "The Farewell || Burger Farewell || Vimeo"
+      },
+      {
+        title: "Sound Design",
+        video: "https://player.vimeo.com/video/402673760?h=6c1194766a",
+        description: "In My Heart - Ron Artis II || PUNCH Audio || Vimeo"
+      },
+      {
+        title: "Foley",
+        video: "https://player.vimeo.com/video/395798045?h=83a927a9bf",
+        description: "Brahma - Duplo Malte || PUNCH Audio || Vimeo"
+      }
     ]
   };
   
