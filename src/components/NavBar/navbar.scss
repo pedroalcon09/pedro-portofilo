@@ -1,5 +1,6 @@
 .navigation-bar {
     height: 100px;
+    background-color: black;
 
      .wrapper{
         max-width: 1370px;
@@ -9,8 +10,10 @@
         justify-content: space-between;
         height: 100%;
      
-     span {
-        font-weight: bolder;
+     .logoHeader {
+        margin-top: 40px;
+        width: 430px;
+        height: 140px;
      }
 
      .social {

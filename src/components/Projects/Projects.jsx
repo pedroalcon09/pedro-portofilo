@@ -48,6 +48,7 @@ export const Projects = () => {
                           img={projeto.img}
                           title={projeto.title}
                           description={projeto.description}
+                          link={projeto.link}
                         />
                       );
                     })}
@@ -62,6 +63,7 @@ export const Projects = () => {
                           img={projeto.img}
                           title={projeto.title}
                           description={projeto.description}
+                          link={projeto.repo}
                         />
                       );
                     })}
@@ -91,19 +93,18 @@ export const Projects = () => {
                       </Col>
                   </Row>
                 </Tab.Pane>
-                <Tab.Pane eventKey="fourth">
+                <Tab.Pane eventKey="fourth" >
                   <Row>
                     {projetos.AUDIO.map((projeto, index) => {
                       return (
-                        <Col sm={4} key={index}>
+                        <Col sm={4} key={index} className="music">
                           <h3>{projeto.title}</h3>
                           <div>
                             <iframe
                               title={projeto.description.split(" || ")[0]}
                               src={projeto.video}
-                              frameborder="0"
                               allow="autoplay; fullscreen; picture-in-picture"
-                              allowfullscreen
+                              allowFullScreen
                             ></iframe>
                           </div>
                           <script src="https://player.vimeo.com/api/player.js"></script>

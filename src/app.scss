@@ -20,12 +20,11 @@ a {
 
 body {
     background-color: #ccc !important;
-    color: black !important;
     scroll-snap-type: y mandatory !important;
     scroll-behavior: smooth  !important;
 }
 
 section {
-    height:100vh ;
+    height:100vh !important;
     scroll-snap-align: center;
 }

@@ -1,12 +1,17 @@
 .hero {
   height: calc(100vh - 100px);
-  background: linear-gradient(180deg, #ccc, #111132);
+  // background: linear-gradient(180deg, #111152, #222, #333);
+  background-color: black;
   overflow: hidden;
+  z-index: 3;
+  width: 100vw;
 
   .wrapper {
-    max-width: 1366px;
+    max-width: 100vw;
     height: 100%;
     margin: auto;
+    z-index: 3;
+    display: flex;
 
     .textContainer {
       height: 100%;
@@ -14,16 +19,24 @@
       flex-direction: column;
       justify-content: center;
       gap: 40px;
+      z-index: 3;
+      font-weight: bolder;
+      margin: auto;
 
       h2 {
-        font-size: 33px;
+        font-size: 40px;
+        font-weight: bold;
         color: rebeccapurple;
         letter-spacing: 10px;
+        z-index: 3;
       }
 
       h1 {
-        font-size: 88px;
-        width: 49%;
+        z-index: 5;
+        font-size: 80px;
+        font-weight: bold;
+        width: 45%;
+        color: white;
       }
 
       button {
@@ -37,6 +50,10 @@
         cursor: pointer;
       }
 
+      .buttons {
+        z-index: inherit;
+      }
+
       img {
         width: 50px;
       }
@@ -44,12 +61,15 @@
   }
 
   .imageContainer {
+    position: relative; /* Certifique-se de que o contêiner tenha um contexto de posicionamento */
+
     img {
-      width: 480px;
-      height: 91.5%;
+      width: 480px; /* Ajusta a largura para 100% do contêiner */
+      height: auto; /* Ajusta a altura automaticamente para manter a proporção */
       position: absolute;
       bottom: 0;
-      right: 0;
+      right: 18vw;
+      object-fit: contain; /* Mantém a proporção da imagem */
     }
   }
 
@@ -61,6 +81,19 @@
     white-space: nowrap;
     color: #ffffff09;
     width: 100%;
+    z-index: 1;
+  }
 
+  .background-image-right {
+    top: 20%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .background-image-left {
+    bottom: 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }

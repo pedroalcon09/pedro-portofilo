@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import "./hero.scss";
+import colorSharp2 from "../../imgs/color-sharp2.png";
+import colorSharp from "../../imgs/color-sharp.png";
 
 const textVariants = {
   initial: {
@@ -45,10 +47,9 @@ const imageVariants = {
   },
   animate: {
     x: 0,
-    opacity: 1,
+    opacity: 2,
     transition: {
-      duration: 1,
-      staggerChildren: 0.1,
+      duration: 1
     },
   },
 };
@@ -56,19 +57,31 @@ const imageVariants = {
 export const Hero = () => {
   return (
     <div>
-      <div className="hero">
+      <motion.div className="hero">
         <div className="wrapper">
-          <motion.div
-            className="textContainer"
-            variants={textVariants}
-            initial="initial"
-            animate="animate"
-          >
-            <motion.h2 variants={textVariants}>Pedro Alcon</motion.h2>
-            <motion.h1 variants={textVariants}>
+          <img className="background-image-right" src={colorSharp2} />
+          <img className="background-image-left" src={colorSharp} />
+          <motion.div className="textContainer">
+            <motion.h2
+              variants={textVariants}
+              initial="initial"
+              animate="animate"
+            >
+              Pedro Alcon
+            </motion.h2>
+            <motion.h1
+              variants={textVariants}
+              initial="initial"
+              animate="animate"
+            >
               Desenvolvedor de Software Full-Stack
             </motion.h1>
-            <motion.div variants={textVariants} className="buttons">
+            <motion.div
+              variants={textVariants}
+              className="buttons"
+              initial="initial"
+              animate="animate"
+            >
               <motion.button
                 variants={textVariants}
                 whileHover={{ scale: 1.1 }}
@@ -86,8 +99,7 @@ export const Hero = () => {
             </motion.div>
             <motion.img
               variants={textVariants}
-              animate="animate"
-              initial="initial"
+              animate="scrollButton"
               src="/scroll.png"
               alt=""
             />
@@ -95,19 +107,27 @@ export const Hero = () => {
         </div>
 
         <motion.div
+          variants={sliderVariants}
+          initial="start"
+          animate="animation"
           className="sliddingTextContainer"
         >
           Desenvolvedor . Músico . Sound Desingner
         </motion.div>
 
-        <motion.div variants={imageVariants} className="imageContainer" initial="initial" animate="animate">
+        <motion.div
+          variants={imageVariants}
+          className="imageContainer"
+          initial="initial"
+          animate="animate"
+        >
           <motion.img
             variants={imageVariants}
             src="/hero-vmake.png"
             alt="HERO-IMG"
           />
         </motion.div>
-      </div>
+      </motion.div>
     </div>
   );
 };

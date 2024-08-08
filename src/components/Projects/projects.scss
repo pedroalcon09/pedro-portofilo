@@ -4,7 +4,7 @@
   position: relative;
   background-color: black;
   color: white !important;
-  z-index: 999;
+  z-index: 5;
 
   section {
     height: auto;
@@ -119,6 +119,10 @@
   transition: 0.5s ease-in-out;
   opacity: 0;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .proj-imgbx:hover .proj-txtx {
   top: 50%;
@@ -137,8 +141,11 @@
   font-size: 15px;
   letter-spacing: 0.8px;
   color: white;
+  display: block;
+  width: 75%;  
 }
-.background-image-right {
+
+.project .background-image-right {
   top: 20%;
   position: absolute;
   bottom: 0;
@@ -146,7 +153,7 @@
   right: 0;
   z-index: -4;
 }
-.background-image-left {
+.project .background-image-left {
   bottom: 20%;
   position: absolute;
   top: 0;
@@ -154,3 +161,7 @@
   left: 0;
   z-index: -4;
 }
+
+.project .music {}
+
+.project .snd-cld {}

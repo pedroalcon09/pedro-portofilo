@@ -3,7 +3,6 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Container, Row, Col } from "react-bootstrap";
 import { skills } from "../../data/skills";
-
 import {
   SiJavascript,
   SiCss3,
@@ -18,6 +17,9 @@ import {
   SiBootstrap,
   SiGit,
 } from "react-icons/si";
+import colorSharp2 from "../../imgs/color-sharp2.png";
+import colorSharp from "../../imgs/color-sharp.png";
+
 
 export const Skills = () => {
   
@@ -60,7 +62,8 @@ export const Skills = () => {
 
   return (
     <div className="skills">
-      <Container>
+      
+      <Container className="skill-container">
         <Row>
           <Col>
             <div className="skill-bx">
@@ -98,6 +101,9 @@ export const Skills = () => {
           </Col>
         </Row>
       </Container>
+
+      <img className="background-image-right" src={colorSharp2} />
+      <img className="background-image-left" src={colorSharp} />
 
     </div>
   );

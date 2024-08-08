@@ -1,0 +1,45 @@
+.contacts {
+  background-color: black;
+  height: 100vh;
+  color: white;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+
+  .social_list {
+    padding-left: 0px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 15px;
+  }
+
+  .formContainer form,
+  .textContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.contacts .background-image-right {
+  top: 20%;
+  position: absolute;
+  bottom: 0;
+  width: 35%;
+  right: 0;
+  z-index: -4;
+}
+.contacts .background-image-left {
+  bottom: 20%;
+  position: absolute;
+  top: 0;
+  width: 35%;
+  left: 0;
+  z-index: -4;
+}

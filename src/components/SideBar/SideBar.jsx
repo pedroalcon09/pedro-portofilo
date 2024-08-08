@@ -6,7 +6,7 @@ import { useState } from "react";
 
 const variants = {
   open: {
-    clipPath: "circle(1100px at 50px 50px)",
+    clipPath: "circle(1700px at 50px 50px)",
     transition: {
       type: "spring",
       stiffness: 20,

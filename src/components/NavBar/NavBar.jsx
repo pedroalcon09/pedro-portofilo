@@ -2,8 +2,11 @@ import { useState } from "react";
 import "./navbar.scss";
 import { motion } from "framer-motion";
 import { SideBar } from "../SideBar/SideBar";
+import logoSmall from "../../imgs/logo_small.png";
+import logo1 from "../../imgs/logo1.png";
 
-const NavBar = () => {
+
+export const NavBar = () => {
   const [open, setOpen] = useState(false);
 
   const variants = {
@@ -25,9 +28,7 @@ const NavBar = () => {
     <div className="navigation-bar">
       <SideBar />
       <div className="wrapper">
-        <span>
-          Pedro Alcon
-        </span>
+        <img className="logoHeader" src={logo1} alt="" />
 
         <motion.ul
           className="social"
@@ -47,5 +48,3 @@ const NavBar = () => {
     </div>
   );
 };
-
-export default NavBar;

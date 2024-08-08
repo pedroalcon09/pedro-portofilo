@@ -20,8 +20,9 @@ import wappler from "../../imgs/wappler.png";
 import leaflet from "../../imgs/leaflet.png";
 import google from "../../imgs/google.png";
 import { useRef } from "react";
-import { motion, useDragControls } from "framer-motion";
+import { motion,useTransform, useScroll, useDragControls } from "framer-motion";
 import { GiStarSwirl } from "react-icons/gi";
+
 
 export const Sobre = () => {
   const controls = useDragControls();
@@ -31,6 +32,14 @@ export const Sobre = () => {
   const startDrag = (event) => {
     controls.start(event);
   };
+
+  const { scrollYProgress } = useScroll({
+    target: constraintsRef,
+    offset: ["start start", "end start"],
+  });
+
+
+  const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
 
   const bubbles = [
     { img: "js", src: js, s: 1, x: 1134, y: 645 },
@@ -43,10 +52,10 @@ export const Sobre = () => {
     { img: "docker", src: docker, s: 1.2, x: 907, y: 88 },
     { img: "react", src: react, s: 1.2, x: 1633, y: 820 },
     { img: "html", src: html, s: 1.2, x: 1123, y: 60 },
-    { img: "css", src: css, s: 1.2, x: 1529, y: 357 },
-    { img: "sql", src: sql, s: 0.7, x: 1440, y: 1342 },
-    { img: "vscode", src: vscode, s: 0.7, x: 929, y: 1293 },
-    { img: "git", src: git, s: 0.7, x: 2135, y: 1698 },
+    { img: "css", src: css, s: 1.2, x: 729, y: 357 },
+    { img: "sql", src: sql, s: 0.7, x: 1610, y: 442 },
+    { img: "vscode", src: vscode, s: 0.7, x: 929, y: 793 },
+    { img: "git", src: git, s: 0.7, x: 120, y: 498 },
     { img: "pytest", src: pytest, s: 0.7, x: 276, y: 82 },
     { img: "trello", src: trello, s: 1.3, x: 1419, y: 118 },
     { img: "clickup", src: clickup, s: 1.6, x: 100, y: 833 },
@@ -100,6 +109,7 @@ export const Sobre = () => {
           );
         })}
       </motion.div>
+      <motion.div style={{ x: yBg }} className="stars"></motion.div>
     </div>
   );
 };
