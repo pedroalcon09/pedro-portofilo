@@ -2,62 +2,67 @@ export const skills = [
     {
       tech: 'JavaScript',
       icon: 'SiJavascript',
-      description: 'JavaScript é uma linguagem de programação usada para criar comportamento dinâmico em páginas web.'
+      description: 'Linguagem de programação para criar lógica em páginas web.'
     },
     {
       tech: 'CSS3',
       icon: 'SiCss3',
-      description: 'CSS3 é a última versão do Cascading Style Sheets, usada para estilizar páginas web.'
+      description: 'Liguagem de programação para estilizar páginas web.'
     },
     {
       tech: 'Python',
       icon: 'SiPython',
-      description: 'Python é uma linguagem de programação de alto nível conhecida por sua simplicidade e legibilidade.'
+      description: 'Linguagem de programação simples e sofisticada.'
     },
     {
       tech: 'React',
       icon: 'SiReact',
-      description: 'React é uma biblioteca JavaScript para construir interfaces de usuário, mantida pelo Facebook.'
+      description: 'Biblioteca JavaScript para construir interfaces de usuário.'
     },
     {
       tech: 'PostgreSQL',
       icon: 'SiPostgresql',
-      description: 'PostgreSQL é um sistema de gerenciamento de banco de dados relacional open-source.'
+      description: 'Sistema de gerenciamento de banco de dados relacional.'
     },
     {
       tech: 'Django',
       icon: 'SiDjango',
-      description: 'Django é um framework web de alto nível para Python, que permite o desenvolvimento rápido de sites seguros e mantidos facilmente.'
+      description: 'Framework em Python para desenvolvimento rápido de APIs.'
     },
     {
       tech: 'HTML5',
       icon: 'SiHtml5',
-      description: 'HTML5 é a quinta versão do Hypertext Markup Language, a linguagem padrão para criar páginas web.'
+      description: 'Linguagem padrão para criar páginas web.'
     },
     {
       tech: 'Jest',
       icon: 'SiJest',
-      description: 'Jest é um framework de testes em JavaScript com foco na simplicidade.'
+      description: 'Framework de testes em JavaScript.'
     },
     {
       tech: 'Node.js',
       icon: 'SiNodedotjs',
-      description: 'Node.js é um ambiente de execução JavaScript server-side baseado no motor V8 do Chrome.'
+      description: 'Ambiente de execução JavaScript server-side.'
     },
     {
       tech: 'Leaflet',
       icon: 'SiLeaflet',
-      description: 'Leaflet é uma biblioteca JavaScript open-source usada para construir mapas interativos.'
+      description: 'Biblioteca JavaScript para construir mapas interativos.'
     },
     {
       tech: 'Bootstrap',
       icon: 'SiBootstrap',
-      description: 'Bootstrap é um framework front-end que facilita o desenvolvimento de sites responsivos e mobile-first.'
+      description: 'Framework que facilita a estilização de sites mobile-first.'
     },
     {
       tech: 'Git',
       icon: 'SiGit',
-      description: 'Git é um sistema de controle de versão distribuído usado para rastrear alterações no código-fonte durante o desenvolvimento de software.'
+      description: 'Sistema de versões usado em desenvolvimento de software.'
+    },
+    {
+      tech: 'Sass',
+      icon: 'SiSass',
+      description: 'Extensão de CSS incrível, facilita muito estilização responsiva.'
     }
   ];
   

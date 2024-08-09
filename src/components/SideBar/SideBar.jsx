@@ -3,6 +3,7 @@ import { Links } from "./links/Links";
 import { ToggleButton } from "./toggleButton/ToggleButton";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import logoHeader from "../../imgs/logo_small.png"
 
 const variants = {
   open: {
@@ -24,6 +25,7 @@ export const SideBar = () => {
   return (
     <motion.div className="sidebar" initial="closed" animate={open ? "open" : "closed"}>
       <motion.div className="bg" variants={variants}>
+      <img className="header_logo" src={logoHeader} alt="LOGO-HEADER" />
         <Links />
       </motion.div>
 

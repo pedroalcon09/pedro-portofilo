@@ -9,37 +9,129 @@
   position: relative;
   z-index: 5;
 
-  .social_list {
-    padding-left: 0px;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    gap: 15px;
+  .contactCont {
+    width: 75%;
   }
 
-  .formContainer form,
   .textContainer {
     display: flex;
     align-items: center;
-    flex-direction: column;
     justify-content: center;
-  }
-}
+    gap: 40px;
 
-.contacts .background-image-right {
-  top: 20%;
-  position: absolute;
-  bottom: 0;
-  width: 35%;
-  right: 0;
-  z-index: -4;
-}
-.contacts .background-image-left {
-  bottom: 20%;
-  position: absolute;
-  top: 0;
-  width: 35%;
-  left: 0;
-  z-index: -4;
+    h1 {
+      font-size: 100px;
+      line-height: 100px;
+      font-weight: bold;
+      margin-bottom: 60px;
+    }
+
+    span {
+      font-weight: 300;
+    }
+
+    .social_list {
+      padding-left: 0px;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 15px;
+    }
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+      margin-bottom: 50px;
+
+      h2 {
+        font-weight: 600;
+      }
+
+      span {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .formContainer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .phoneSvg {
+      position: absolute;
+      margin: auto;
+      stroke: magenta;
+      z-index: -1;
+    }
+
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+      gap: 20px;
+      position: absolute;
+
+      input,
+      textarea {
+        width: 100%;
+        background-color: transparent;
+        border: 2px solid white;
+        color: white;
+        padding: 20px;
+        border-radius: 5px;
+      }
+
+      button {
+        width: 100%;
+        background-color: rgb(234, 0, 255);
+        border: none;
+        padding: 20px;
+        color: black;
+        font-weight: 600;
+        font-size: 18px;
+      }
+
+      .error_form,
+      .success_form {
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 15px;
+      }
+
+      .success_form {
+        color: green;
+      }
+
+      .error_form {
+        color: red;
+      }
+    }
+  }
+
+  .background-image-right {
+    top: 20%;
+    position: absolute;
+    bottom: 0;
+    width: 35%;
+    right: 0;
+    z-index: -4;
+  }
+  .background-image-left {
+    bottom: 20%;
+    position: absolute;
+    top: 0;
+    width: 35%;
+    left: 0;
+    z-index: -4;
+  }
 }

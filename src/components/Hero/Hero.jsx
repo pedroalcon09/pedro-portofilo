@@ -47,9 +47,9 @@ const imageVariants = {
   },
   animate: {
     x: 0,
-    opacity: 2,
+    opacity: 10,
     transition: {
-      duration: 1
+      duration: 1,
     },
   },
 };
@@ -98,6 +98,7 @@ export const Hero = () => {
               </motion.button>
             </motion.div>
             <motion.img
+              className="scroll_btn"
               variants={textVariants}
               animate="scrollButton"
               src="/scroll.png"
@@ -112,7 +113,7 @@ export const Hero = () => {
           animate="animation"
           className="sliddingTextContainer"
         >
-          Desenvolvedor . Músico . Sound Desingner
+          Desenvolvedor · Músico · Sound Desingner
         </motion.div>
 
         <motion.div
@@ -123,7 +124,7 @@ export const Hero = () => {
         >
           <motion.img
             variants={imageVariants}
-            src="/hero-vmake.png"
+            src="/hero_v2.png"
             alt="HERO-IMG"
           />
         </motion.div>

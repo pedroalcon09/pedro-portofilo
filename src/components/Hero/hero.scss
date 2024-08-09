@@ -1,8 +1,10 @@
+@import "../../app.scss";
+
 .hero {
   height: calc(100vh - 100px);
   // background: linear-gradient(180deg, #111152, #222, #333);
   background-color: black;
-  overflow: hidden;
+  overflow-y: hidden !important;
   z-index: 3;
   width: 100vw;
 
@@ -14,44 +16,96 @@
     display: flex;
 
     .textContainer {
-      height: 100%;
+      width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
       gap: 40px;
       z-index: 3;
       font-weight: bolder;
       margin: auto;
+      margin-top: 50px;
+      // margin-left: 20px;
+
+      @include desktop {
+        height: 100%;
+        width: 75%;
+        align-items: start;
+      }
 
       h2 {
-        font-size: 40px;
-        font-weight: bold;
+        font-size: 30px;
+        width: 100%;
+        font-weight: bolder;
         color: rebeccapurple;
         letter-spacing: 10px;
+        text-align: center;
         z-index: 3;
+
+        @include tablet {
+          font-size: 35px;
+          width: 75%;
+          font-weight: bold;
+        }
+
+        @include desktop {
+          font-size: 40px;
+          width: 45%;
+          font-weight: bold;
+          text-align: left;
+        }
       }
 
       h1 {
         z-index: 5;
-        font-size: 80px;
         font-weight: bold;
-        width: 45%;
+        font-size: 30px;
         color: white;
+        text-align: center;
+
+        @include tablet {
+          width: 75%;
+          font-size: 50px;
+        }
+
+        @include desktop {
+          width: 45%;
+          text-align: left;
+        }
+      }
+
+      .scroll_btn {
+        display: none;
+
+        @include desktop {
+          display: inline;
+        }
       }
 
       button {
-        padding: 18px;
-        margin-left: 20px;
+        padding: 20px;
+        width: 200px;
         background-color: transparent;
         color: white;
         border-radius: 4px;
         border: 1px solid white;
         font-size: 20px;
         cursor: pointer;
+        margin-bottom: 20px;
+        margin-left: 20px;
+
+        @include desktop {
+          margin-bottom: 0px;
+        }
       }
 
       .buttons {
         z-index: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
       }
 
       img {
@@ -61,27 +115,64 @@
   }
 
   .imageContainer {
-    position: relative; /* Certifique-se de que o contêiner tenha um contexto de posicionamento */
+    // position: relative; /* Certifique-se de que o contêiner tenha um contexto de posicionamento */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 
     img {
-      width: 480px; /* Ajusta a largura para 100% do contêiner */
       height: auto; /* Ajusta a altura automaticamente para manter a proporção */
-      position: absolute;
-      bottom: 0;
-      right: 18vw;
       object-fit: contain; /* Mantém a proporção da imagem */
+      width: 320px; /* Ajusta a largura para 100% do contêiner */
+      position: absolute;
+      bottom: 5%;
+
+      @include tablet {
+        width: 320px; /* Ajusta a largura para 100% do contêiner */
+        bottom: 10px;
+      }
+
+      @include desktop {
+        width: 450px; /* Ajusta a largura para 100% do contêiner */
+        bottom: 150px;
+        right: 0vw;
+      }
+      @include largeDesktop {
+        width: 700px;
+        bottom: 5px;
+        right: 5vw;
+      }
+
+      @include giantDesktop {
+        width: 875px;
+        bottom: 5px;
+        right: 5vw;
+      }
     }
   }
 
   .sliddingTextContainer {
     position: absolute;
-    font-size: 50vh;
-    bottom: -110px;
+    font-weight: 600;
+    font-size: 18vh;
+    bottom: 0px;
     display: flex;
     white-space: nowrap;
     color: #ffffff09;
     width: 100%;
     z-index: 1;
+
+    @include tablet {
+      font-size: 22vh;
+      bottom: -10px;
+    }
+
+    @include desktop {
+    font-weight: 400;
+      font-size: 30vh;
+      bottom: -50px;
+    }
   }
 
   .background-image-right {

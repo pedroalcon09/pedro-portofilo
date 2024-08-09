@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 html{
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
+    scroll-snap-type: y mandatory !important;
+    scroll-behavior: smooth !important;
+    overflow-x: hidden !important;
 }
 
 * {
@@ -26,5 +26,35 @@ body {
 
 section {
     height:100vh !important;
-    scroll-snap-align: center;
+    scroll-snap-align: center !important;
+}
+
+@mixin mobile {
+    @media (max-width:767px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width:768px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width:1024px) {
+        @content;
+    }
+}
+
+@mixin largeDesktop {
+    @media (min-width:1366px) {
+        @content;
+    }
+}
+
+@mixin giantDesktop {
+    @media (min-width:1800px) {
+        @content;
+    }
 }

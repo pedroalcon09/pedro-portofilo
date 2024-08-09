@@ -1,35 +1,77 @@
+@import "../../app.scss";
+
 .navigation-bar {
-    height: 100px;
-    background-color: black;
+  height: 100px;
+  width: 100%;
+  background-color: black;
 
-     .wrapper{
-        max-width: 1370px;
-        margin: auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 100%;
-     
-     .logoHeader {
-        margin-top: 40px;
-        width: 430px;
-        height: 140px;
-     }
+  @include desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
 
-     .social {
-        list-style: none;
+  .wrapper {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 100%;
+    margin: 0px;
 
-        .box {
-            width: 200px;
-            height: 200px;
-            background-color: wheat;
-        }
-        display: flex;
-        gap: 20px;
-
-        img {
-            width: 35px;
-        }
-     }
+    @include desktop {
+      justify-content: space-between;
+      max-width: 87%;
     }
+
+    .logoHeaderBig {
+      display: none;
+
+      @include tablet {
+        width: 300px;
+        height: auto; /* Ajusta a altura automaticamente para manter a proporção */
+        object-fit: contain; /* Mantém a proporção da imagem */
+        display: flex;
+      }
+
+      @include desktop {
+        height: auto; /* Ajusta a altura automaticamente para manter a proporção */
+        object-fit: contain; /* Mantém a proporção da imagem */
+        display: flex;
+      }
+    }
+
+    .logoHeaderSmall {
+      width: 80px;
+      height: auto; /* Ajusta a altura automaticamente para manter a proporção */
+      object-fit: contain; /* Mantém a proporção da imagem */
+      display: flex;
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    .social {
+      list-style: none;
+      display: none !important;
+
+      @include desktop {
+        display: flex !important;
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: wheat;
+      }
+      display: flex;
+      gap: 20px;
+
+      img {
+        width: 35px;
+      }
+    }
+  }
 }

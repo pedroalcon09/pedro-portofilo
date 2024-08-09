@@ -1,8 +1,10 @@
+@import "../../app.scss";
+
 .skills {
   height: 100vh;
   width: 100vw;
   background-color: black;
-  overflow-Y: hidden !important;
+  overflow-y: hidden !important;
   color: white;
   display: flex;
   align-items: center;
@@ -10,141 +12,172 @@
   position: relative;
   z-index: 5;
 
-  .skill-container {
+  .background-image-right {
+    top: 20%;
+    position: absolute;
+    bottom: 0;
+    width: 35%;
+    right: 0;
+    z-index: -4;
+  }
+  .background-image-left {
+    bottom: 20%;
+    position: absolute;
+    top: 0;
+    width: 35%;
+    left: 0;
+    z-index: -4;
+  }
+
+  .skills-container {
     margin: 0px;
     max-width: 80% !important;
-  }
 
-  .skill-header {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 50px;
-
-     h2 {
-      font-size: 45px;
-      font-weight: 700;
-      text-align: center;
-    }
-     p {
-      color: #b8b8b8;
-      font-size: 18px;
-      letter-spacing: 0.8px;
-      line-height: 1.5em;
-      margin: 14px auto 30px auto;
-      text-align: center;
-      width: 100%;
-    }
-  }
-
-  .skill-bx {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: #1111118d;
-    padding: 30px;
-    border-radius: 10px;
-    padding: 100px 0px;
-
-    .skill-slider {
-      width: 100%;
+    @include giantDesktop {
+      max-width: 95% !important;
     }
 
-    .item {
-      font-size: 50px;
+    .skill-bx {
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      font-family: "Raleway", sans-serif;
+      background-color: #1111118d;
+      border-radius: 10px;
+      padding: 30px 0px;
 
-      .purple-circle {
+      .skill-header {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 50px;
+
+        h2 {
+          font-size: 25px;
+          font-weight: 700;
+          text-align: center;
+
+          @include tablet {
+            font-size: 35px;
+          }
+
+          @include desktop {
+            font-size: 45px;
+          }
+        }
+        p {
+          color: #b8b8b8;
+          font-size: 16px;
+          letter-spacing: 0.8px;
+          line-height: 1.5em;
+          margin: 14px auto 30px auto;
+          text-align: center;
+          width: 90%;
+
+          @include tablet {
+            font-size: 18px;
+            width: 75%;
+          }
+
+          @include desktop {
+            font-size: 20px;
+            width: 60%;
+          }
+
+          @include largeDesktop {
+            font-size: 22px;
+            width: 50%;
+          }
+        }
+      }
+
+      .skill-slider {
+        width: 100%;
+      }
+
+      .item {
+        font-size: 50px;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 5px;
-        padding: 30px;
-        background: linear-gradient(black, black) padding-box,
-          linear-gradient(to right, darkblue, darkorchid) border-box;
-        border-radius: 50em;
-        border: 15px solid transparent;
+        flex-direction: column;
+        font-family: "Raleway", sans-serif;
+
+        .skills-container {
+          position: relative;
+          cursor: pointer;
+        }
+
+        .purple-circle {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 5px;
+          padding: 30px;
+          background: linear-gradient(black, black) padding-box,
+            linear-gradient(to right, darkblue, darkorchid) border-box;
+          border-radius: 50em;
+          border: 15px solid transparent;
+        }
+      }
+
+      .tooltip-text {
+        font-size: 15px;
+        right: -15px;
+        top: 10px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Raleway", sans-serif;
+        position: relative;
+        padding: 10px;
+        background-color: #222;
+        border-radius: 10px;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        width: 200px;
+        box-shadow: 0px 0px 5px 0px #ccc;
+        -webkit-box-shadow: 0px 0px 5px 0px #ccc;
+        -moz-box-shadow: 0px 0px 5px 0px #ccc;
+        z-index: 5;
+
+        @include tablet {
+          right: -45px;
+
+        }
+
+        @include desktop {
+          right: -35px;
+        }
+
+        @include largeDesktop {
+          right: -40px;
+        }
+
+        @include giantDesktop {
+          right: -140px;
+          top: 30px;
+        }
+      }
+
+      .tooltip-text::before {
+        content: "";
+        position: absolute;
+        z-index: 5;
+      }
+
+      .skill-container:hover .tooltip-text {
+        visibility: visible;
+        opacity: 1;
+        z-index: 5;
+      }
+
+      .skill-container {
+        height: 350px;
       }
     }
-
-    .skill-container {
-      position: relative;
-      cursor: pointer;
-    }
-
-    .tooltip-text {
-      font-size: 20px;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: "Raleway", sans-serif;
-      position: relative;
-      padding: 15px;
-      background-color: #222;
-      border-radius: 10px;
-      visibility: hidden;
-      opacity: 0;
-      transition: opacity 0.5s ease;
-      width: 350px;
-      box-shadow: 0px 0px 5px 0px #ccc;
-      -webkit-box-shadow: 0px 0px 5px 0px #ccc;
-      -moz-box-shadow: 0px 0px 5px 0px #ccc;
-      z-index: 5;
-    }
-
-    .tooltip-text::before {
-      content: "";
-      position: absolute;
-      z-index: 5;
-    }
-
-    .skill-container:hover .tooltip-text {
-      visibility: visible;
-      opacity: 1;
-      z-index: 5;
-    }
   }
-
-  // .background-image-right {
-  //   top: 20%;
-  //   position: absolute;
-  //   bottom: 0;
-  //   width: 35%;
-  //   right: 0;
-  //   z-index: 3;
-  // }
-  // .background-image-left {
-  //   bottom: 20%;
-  //   position: absolute;
-  //   top: 0;
-  //   width: 35%;
-  //   left: 0;
-  //   z-index: 3;
-  // }
-
-  
-}
-
-.skills .background-image-right {
-  top: 20%;
-  position: absolute;
-  bottom: 0;
-  width: 35%;
-  right: 0;
-  z-index: -4;
-}
-.skills .background-image-left {
-  bottom: 20%;
-  position: absolute;
-  top: 0;
-  width: 35%;
-  left: 0;
-  z-index: -4;
 }

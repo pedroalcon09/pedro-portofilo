@@ -28,7 +28,8 @@ export const NavBar = () => {
     <div className="navigation-bar">
       <SideBar />
       <div className="wrapper">
-        <img className="logoHeader" src={logo1} alt="" />
+        <img className="logoHeaderBig" src={logo1} alt="" />
+        <img className="logoHeaderSmall" src={logoSmall} alt="" />
 
         <motion.ul
           className="social"

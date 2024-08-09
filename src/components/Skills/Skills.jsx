@@ -16,6 +16,7 @@ import {
   SiLeaflet,
   SiBootstrap,
   SiGit,
+  SiSass
 } from "react-icons/si";
 import colorSharp2 from "../../imgs/color-sharp2.png";
 import colorSharp from "../../imgs/color-sharp.png";
@@ -24,17 +25,22 @@ import colorSharp from "../../imgs/color-sharp.png";
 export const Skills = () => {
   
   const responsive = {
-    superLargeDesktop: {
+    giantDesktop: {
       // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
+      breakpoint: { max: 4000, min: 1701 },
       items: 5,
     },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 1600, min: 1301 },
       items: 4,
     },
+    desktop: {
+      breakpoint: { max: 1300, min: 1024 },
+      items: 3,
+    },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
+      breakpoint: { max: 1023, min: 464 },
       items: 2,
     },
     mobile: {
@@ -56,6 +62,7 @@ export const Skills = () => {
     SiLeaflet: SiLeaflet,
     SiBootstrap: SiBootstrap,
     SiGit: SiGit,
+    SiSass:SiSass,
   };
 
   
@@ -63,7 +70,7 @@ export const Skills = () => {
   return (
     <div className="skills">
       
-      <Container className="skill-container">
+      <Container className="skills-container">
         <Row>
           <Col>
             <div className="skill-bx">
@@ -78,7 +85,7 @@ export const Skills = () => {
                 responsive={responsive}
                 infinite={true}
                 className="skill-slider"
-                autoPlay={true}
+                autoPlay={false}
               >
                 {skills.map((skill, index) => {
                   const IconComponent = iconMap[skill.icon];
