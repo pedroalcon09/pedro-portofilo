@@ -70,34 +70,39 @@ export const Projects = () => {
                   </Row>
                 </Tab.Pane>
                 <Tab.Pane eventKey="third">
-                <Row>
-                      <Col sm={4} className="snd-cld">
-                        <ReactPlayer
-                          width="75%"
-                          url="https://soundcloud.com/pedro-alcon/sets/ceviche-da-saudade"
-                        />
-                      </Col>
+                  <Row className="d-flex align-items-center justify-content-around">
+                    <Col md={3} sm={4} xl={3} className="col-10 mb-5 mb-md-4 p-1 pt-3 pb-3 snd-cld">
+                      <h4>Ceviche dá Saudade</h4>
+                      <ReactPlayer
+                        width="75%"
+                        url="https://soundcloud.com/pedro-alcon/sets/ceviche-da-saudade"
+                      />
+                    </Col>
 
-                      <Col sm={4} className="snd-cld">
-                        <ReactPlayer
-                          width="75%"
-                          url="https://soundcloud.com/pedro-alcon/sets/ransomware-leftovers"
-                        />
-                      </Col>
+                    <Col md={3} sm={4} xl={3} className="col-10 mb-5 mb-md-4 p-1 pt-3 pb-3 snd-cld">
+                      <h4>Ransomware Leftovers</h4>
 
-                      <Col sm={4} className="snd-cld">
-                        <ReactPlayer
-                          width="75%"
-                          url="https://soundcloud.com/pedro-alcon/assassinato-no-jasmin"
-                        />
-                      </Col>
+                      <ReactPlayer
+                        width="75%"
+                        url="https://soundcloud.com/pedro-alcon/sets/ransomware-leftovers"
+                      />
+                    </Col>
+
+                    <Col md={3} sm={4} xl={3} className="col-10 mb-5 mb-md-4 p-1 pt-3 pb-3 snd-cld">
+                      <h4>Assassinato no Jasmin</h4>
+
+                      <ReactPlayer
+                        width="75%"
+                        url="https://soundcloud.com/pedro-alcon/assassinato-no-jasmin"
+                      />
+                    </Col>
                   </Row>
                 </Tab.Pane>
-                <Tab.Pane eventKey="fourth" >
+                <Tab.Pane eventKey="fourth">
                   <Row className="d-flex align-items-center justify-content-center">
                     {projetos.AUDIO.map((projeto, index) => {
                       return (
-                        <Col sm={4} key={index} className="video">
+                        <Col sm={4} lg={3} key={index} className="mb-3 video">
                           <h3>{projeto.title}</h3>
                           <div>
                             <iframe
@@ -113,7 +118,6 @@ export const Projects = () => {
                       );
                     })}
                   </Row>
-                  
                 </Tab.Pane>
               </Tab.Content>
             </TabContainer>

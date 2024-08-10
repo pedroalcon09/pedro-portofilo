@@ -106,18 +106,33 @@
     border: 1px solid #ddd;
     margin-bottom: 15px;
     width: 87%;
+    transition: 0.5s;
+    cursor: default;
+    &:hover {
+      transform: scale(1.05) !important;
+      box-shadow: 0px 0px 7px 0px rgba(255, 255, 255, 0.75);
+      -webkit-box-shadow: 0px 0px 7px 0px rgba(255, 255, 255, 0.75);
+      -moz-box-shadow: 0px 0px 7px 0px rgba(255, 255, 255, 0.75);
+      background-color: white;
+
+      h3,
+      h4 {
+        font-weight: bolder !important;
+        color: black;
+      }
+    }
 
     @include tablet {
-    width: 27%;
-    margin: 10px;
-      height: 300px;
+      width: 30%;
+      margin: 10px;
+      height: 370px;
     }
 
     @include desktop {
-      width: 27%;
       margin: 10px;
-        height: 400px;
-      }
+      height: 320px;
+    }
+
 
     div {
       display: flex;
@@ -125,47 +140,61 @@
       justify-content: center;
     }
 
-    h4 {
+    h4, h3 {
       text-align: center;
+      transition: 0.5s;
+      margin-top: 10px;
+    }
+
+    h4 {
+      font-size: 20px;
+    }
+
+    h3 {
+      font-size: 30px;
+
+      @include tablet {
+      font-size: 25px;
+
+      }
     }
 
     iframe {
-      width: 75%;
+      width: 90%;
     }
   }
 
   .snd-cld {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: 0.5s;
+    height: 300px;
+    border-radius: 15px;
+
+    &:hover {
+      transform: scale(1.05) !important;
+      box-shadow: 0px 0px 7px 0px rgba(255, 255, 255, 0.75);
+      -webkit-box-shadow: 0px 0px 7px 0px rgba(255, 255, 255, 0.75);
+      -moz-box-shadow: 0px 0px 7px 0px rgba(255, 255, 255, 0.75);
+      background-color: white;
+
+      h3,
+      h4 {
+        font-weight: bolder !important;
+        color: black;
+      }
+    }
+
+
+    h4, h3 {
+      transition: 0.5s;
+      text-align: center;
+    }
   }
 }
 
-// .nav-link#projects-tabs-tab-first, .nav-link#projects-tabs-tab-second, .nav-link#projects-tabs-tab-third, .nav-link#projects-tabs-tab-fourth {
-//   border: 1px solid rgba(255, 255, 255, 0.5);
-//   margin: 4%;
-
-// }
-
-// .nav-link#projects-tabs-tab-first {
-//   border: 1px solid rgba(255, 255, 255, 0.5);
-//   border-radius: 55px 0px 0px 55px;
-// }
-// .nav-link#projects-tabs-tab-second {
-//   border-top: 1px solid rgba(255, 255, 255, 0.5);
-//   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-//   border-right: 1px solid rgba(255, 255, 255, 0.5);
-//   border: 1px solid rgba(255, 255, 255, 0.5);
-
-// }
-// .nav-link#projects-tabs-tab-third {
-//   border-top: 1px solid rgba(255, 255, 255, 0.5);
-//   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-//   border: 1px solid rgba(255, 255, 255, 0.5);
-
-// }
-
-// .nav-link#projects-tabs-tab-fourth {
-//   border: 1px solid rgba(255, 255, 255, 0.5);
-//   border-radius: 0 55px 55px 0;
-// }
 .proj-imgbx {
   position: relative;
   border-radius: 30px;
