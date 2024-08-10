@@ -87,15 +87,6 @@
       font-weight: 300;
     }
 
-    .social_list {
-      padding-left: 0px;
-      list-style: none;
-      display: flex;
-      align-items: center;
-      justify-content: start;
-      gap: 15px;
-    }
-
     .item {
       display: flex;
       flex-direction: column;
@@ -104,6 +95,20 @@
       align-items: center;
       width: 100%;
 
+      span {
+        width: 100%;
+
+        @include tablet {
+          width: 64%;
+        }
+      }
+
+      .icons_contnr {
+        display: flex;
+        justify-items: flex-end;
+        align-items: center;
+      }
+
       @include tablet {
         align-items: end;
       }
@@ -111,6 +116,29 @@
       @include desktop {
         align-items: start;
         margin-bottom: 50px;
+      }
+
+      .social_list {
+        padding-left: 0px;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 15px;
+        font-size: 30px;
+        width: 100%;
+
+        @include tablet {
+          justify-content: end;
+        }
+
+        @include desktop {
+          justify-content: start;
+
+          li {
+            margin-right: 10px;
+          }
+        }
       }
 
       h2 {
@@ -185,6 +213,7 @@
       padding: 5px 25px;
       border: 2px solid;
       border-radius: 10px;
+      margin: 10px 0px 20px 0px;
     }
 
     .success_form {

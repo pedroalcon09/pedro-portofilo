@@ -76,16 +76,31 @@ export const Contacts = () => {
                 </motion.div>
                 <motion.div variants={variants} className="item">
                   <h2>Redes Sociais</h2>
-                  <span>
+                  <span className="icons_contnr">
                     <ul className="social_list">
                       <li className="social_contact">
-                        <SiGithub />
+                        <a
+                          href="https://github.com/pedroalcon09"
+                          target="_blank"
+                        >
+                          <SiGithub />
+                        </a>
                       </li>
                       <li className="social_contact">
-                        <SiLinkedin />
+                        <a
+                          href="https://www.linkedin.com/in/pedro-henrique-alcon-gomes-5ab1b313b/"
+                          target="_blank"
+                        >
+                          <SiLinkedin />
+                        </a>
                       </li>
                       <li className="social_contact">
-                        <SiInstagram />
+                        <a
+                          href="https://www.instagram.com/pedro_alcon/"
+                          target="_blank"
+                        >
+                          <SiInstagram />
+                        </a>
                       </li>
                     </ul>
                   </span>
