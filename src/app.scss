@@ -1,60 +1,73 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
-html{
-    scroll-snap-type: y mandatory !important;
-    scroll-behavior: smooth !important;
-    overflow-x: hidden !important;
+html {
+  overflow-x: hidden;
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Raleway", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
 }
 
 a {
-    text-decoration: none !important;
-    color: inherit !important;
+  text-decoration: none !important;
+  color: inherit !important;
 }
 
 body {
-    background-color: #ccc !important;
-    scroll-snap-type: y mandatory !important;
-    scroll-behavior: smooth  !important;
+  background-color: #ccc !important;
 }
 
 section {
-    height:100vh !important;
-    scroll-snap-align: center !important;
+  height: fit-content !important;
 }
 
-@mixin mobile {
-    @media (max-width:767px) {
-        @content;
+@media (min-width: 1024px) {
+  html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
+  section {
+    height: 100vh !important;
+    scroll-snap-align: center !important;
+  }
+}
+
+@media (min-width: 1200px) {
+    section {
+      height: 100vh !important;
+      scroll-snap-align: center !important;
     }
+  }
+
+@mixin mobile {
+  @media (max-width: 767px) {
+    @content;
+  }
 }
 
 @mixin tablet {
-    @media (min-width:768px) {
-        @content;
-    }
+  @media (min-width: 768px) {
+    @content;
+  }
 }
 
 @mixin desktop {
-    @media (min-width:1024px) {
-        @content;
-    }
+  @media (min-width: 1024px) {
+    @content;
+  }
 }
 
 @mixin largeDesktop {
-    @media (min-width:1366px) {
-        @content;
-    }
+  @media (min-width: 1366px) {
+    @content;
+  }
 }
 
 @mixin giantDesktop {
-    @media (min-width:1800px) {
-        @content;
-    }
+  @media (min-width: 1800px) {
+    @content;
+  }
 }

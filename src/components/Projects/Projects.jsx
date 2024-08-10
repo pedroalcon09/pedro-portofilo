@@ -94,10 +94,10 @@ export const Projects = () => {
                   </Row>
                 </Tab.Pane>
                 <Tab.Pane eventKey="fourth" >
-                  <Row>
+                  <Row className="d-flex align-items-center justify-content-center">
                     {projetos.AUDIO.map((projeto, index) => {
                       return (
-                        <Col sm={4} key={index} className="music">
+                        <Col sm={4} key={index} className="video">
                           <h3>{projeto.title}</h3>
                           <div>
                             <iframe

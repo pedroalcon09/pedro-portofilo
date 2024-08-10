@@ -87,23 +87,29 @@ export const Hero = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
-                Ver Projetos
+                <a href="#Portfolio">Ver Projetos</a>
               </motion.button>
               <motion.button
                 variants={textVariants}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
-                Fale Comigo
+                <a href="#Contatos">Fale Comigo</a>
               </motion.button>
             </motion.div>
-            <motion.img
-              className="scroll_btn"
+            <motion.a
               variants={textVariants}
               animate="scrollButton"
-              src="/scroll.png"
-              alt=""
-            />
+              href="#Contatos"
+            >
+              <motion.img
+                className="scroll_btn"
+                variants={textVariants}
+                animate="scrollButton"
+                src="/scroll.png"
+                alt=""
+              />
+            </motion.a>
           </motion.div>
         </div>
 

@@ -1,5 +1,8 @@
+@import "../../app.scss";
+
 .contacts {
   background-color: black;
+  // height: fit-content;
   height: 100vh;
   color: white;
   margin: auto;
@@ -9,8 +12,46 @@
   position: relative;
   z-index: 5;
 
+  @include desktop {
+  }
+
+  @include mobile {
+    width: 100%;
+    padding: 10px;
+    flex-direction: column;
+  }
+
   .contactCont {
     width: 75%;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    @include tablet {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @include desktop {
+      flex-direction: column;
+    }
+
+    .contacts_inner_cont {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      @include desktop {
+        justify-content: start;
+        align-items: start;
+        width: 70%;
+      }
+    }
   }
 
   .textContainer {
@@ -20,10 +61,26 @@
     gap: 40px;
 
     h1 {
-      font-size: 100px;
-      line-height: 100px;
+      font-size: 30px;
+      line-height: 40px;
       font-weight: bold;
-      margin-bottom: 60px;
+      margin-bottom: 30px;
+      text-align: center;
+
+      @include tablet {
+        margin-bottom: 40px;
+        font-size: 65px;
+        line-height: 75px;
+        text-align: left;
+      }
+
+      @include desktop {
+        text-align: start;
+        margin-bottom: 50px;
+        font-size: 80px;
+        line-height: 90px;
+        width: 70%;
+      }
     }
 
     span {
@@ -42,26 +99,41 @@
     .item {
       display: flex;
       flex-direction: column;
-      align-items: start;
       justify-content: center;
-      margin-bottom: 50px;
+      margin-bottom: 15px;
+      align-items: center;
+      width: 100%;
+
+      @include tablet {
+        align-items: end;
+      }
+
+      @include desktop {
+        align-items: start;
+        margin-bottom: 50px;
+      }
 
       h2 {
         font-weight: 600;
+        font-size: 20px;
+
+        @include tablet {
+          text-align: end;
+        }
       }
 
       span {
-        font-size: 20px;
+        font-size: 18px;
       }
     }
   }
 
   .formContainer {
-    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    flex-direction: column;
 
     .phoneSvg {
       position: absolute;
@@ -77,7 +149,6 @@
       align-items: start;
       justify-content: center;
       gap: 20px;
-      position: absolute;
 
       input,
       textarea {
@@ -85,8 +156,12 @@
         background-color: transparent;
         border: 2px solid white;
         color: white;
-        padding: 20px;
+        padding: 10px;
         border-radius: 5px;
+
+        @include desktop {
+          padding: 10px;
+        }
       }
 
       button {
@@ -98,23 +173,29 @@
         font-weight: 600;
         font-size: 18px;
       }
+    }
 
-      .error_form,
-      .success_form {
-        font-size: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        padding: 15px;
-      }
+    .error_form,
+    .success_form {
+      font-size: 18px;
+      font-weight: bolder;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 5px 25px;
+      border: 2px solid;
+      border-radius: 10px;
+    }
 
-      .success_form {
-        color: green;
-      }
+    .success_form {
+      color: green;
+      border-color: green;
+      background-color: transparent;
+    }
 
-      .error_form {
-        color: red;
-      }
+    .error_form {
+      color: red;
+      border-color: red;
     }
   }
 

@@ -59,7 +59,7 @@ export const Contacts = () => {
       <img className="background-image-right" src={colorSharp2} />
       <img className="background-image-left" src={colorSharp} />
       <Container>
-        <Row>
+        <Row className="d-flex">
           <Col lg={6} className="textContainer">
             <motion.div
               variants={variants}
@@ -69,25 +69,27 @@ export const Contacts = () => {
               ref={ref}
             >
               <motion.h1 variants={variants}>Vamos trabalhar juntos!</motion.h1>
-              <motion.div variants={variants} className="item">
-                <h2>E-mail</h2>
-                <span>pedro09alcon@gmail.com</span>
-              </motion.div>
-              <motion.div variants={variants} className="item">
-                <h2>Redes Sociais</h2>
-                <span>
-                  <ul className="social_list">
-                    <li className="social_contact">
-                      <SiGithub />
-                    </li>
-                    <li className="social_contact">
-                      <SiLinkedin />
-                    </li>
-                    <li className="social_contact">
-                      <SiInstagram />
-                    </li>
-                  </ul>
-                </span>
+              <motion.div variants={variants} className="contacts_inner_cont">
+                <motion.div variants={variants} className="item">
+                  <h2>E-mail</h2>
+                  <span>pedro09alcon@gmail.com</span>
+                </motion.div>
+                <motion.div variants={variants} className="item">
+                  <h2>Redes Sociais</h2>
+                  <span>
+                    <ul className="social_list">
+                      <li className="social_contact">
+                        <SiGithub />
+                      </li>
+                      <li className="social_contact">
+                        <SiLinkedin />
+                      </li>
+                      <li className="social_contact">
+                        <SiInstagram />
+                      </li>
+                    </ul>
+                  </span>
+                </motion.div>
               </motion.div>
             </motion.div>
           </Col>
@@ -129,7 +131,13 @@ export const Contacts = () => {
               whileInView={{ opacity: 1 }}
               transition={{ delay: 4, duration: 1 }}
             >
-              <input type="text" name="name" id="inp_name" placeholder="Nome" />
+              <input
+                type="text"
+                name="name"
+                id="inp_name"
+                placeholder="Nome"
+                required
+              />
               <input
                 type="text"
                 name="email"
@@ -142,15 +150,13 @@ export const Contacts = () => {
                 id="inp_message"
                 rows={8}
                 placeholder="Mensagem"
+                required
               ></textarea>
               <button>Enviar</button>
-              <div className="error_form">
-                {error === true && "Error"}
-              </div>
-              <div className="success_form">
-              {success === true && "Success"}
-              </div>
             </motion.form>
+            {error === true && <div className="error_form">Error</div>}
+
+            {success === true && <div className="success_form">Success</div>}
           </Col>
         </Row>
       </Container>

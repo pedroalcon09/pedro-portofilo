@@ -13,7 +13,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const App = () => {
   return (
     <div>
-      {/* <section id="Home">
+      <section id="Home">
       <NavBar/>
       <Hero/>
     </section>
@@ -28,13 +28,13 @@ const App = () => {
       </section>
       <section id="Parallax2">
         <Parallax type="portfolio" />
-      </section> */}
+      </section>
       <section id="Portfolio">
         <Projects />
       </section>
-      {/* <section id="Contatos">
+      <section id="Contatos">
         <Contacts />
-      </section> */}
+      </section>
     </div>
   );
 };
