@@ -5,8 +5,10 @@
   // background: linear-gradient(180deg, #111152, #222, #333);
   background-color: black;
   overflow-y: hidden !important;
+  position: relative;
   z-index: 3;
   width: 100vw;
+  overflow-x: hidden !important;
 
   .wrapper {
     max-width: 100vw;
@@ -180,11 +182,15 @@
     position: absolute;
     bottom: 0;
     right: 0;
+    width: 50vw !important;
+    height: 70vh;
   }
   .background-image-left {
     bottom: 20%;
     position: absolute;
     top: 0;
     left: 0;
+    width: 50vw !important;
+    height: 70vh;
   }
 }

@@ -36,6 +36,7 @@
     height: 100%;
     position: absolute;
     z-index: 3;
+    overflow: hidden;
 
     @include mobile {
       background-size: contain;
@@ -52,6 +53,7 @@
     height: 100%;
     position: absolute;
     z-index: 2;
+    overflow: hidden;
 
     @include mobile {
       background-size: contain;
@@ -64,6 +66,7 @@
     background-size: cover;
     background-position: bottom;
     width: 100%;
+    overflow: hidden;
     height: 100%;
     position: absolute;
     z-index: 1;

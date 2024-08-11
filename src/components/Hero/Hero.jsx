@@ -113,14 +113,16 @@ export const Hero = () => {
           </motion.div>
         </div>
 
-        <motion.div
-          variants={sliderVariants}
-          initial="start"
-          animate="animation"
-          className="sliddingTextContainer"
-        >
-          Desenvolvedor · Músico · Sound Desingner
-        </motion.div>
+        {window.innerWidth > 1000 && (
+          <motion.div
+            variants={sliderVariants}
+            initial="start"
+            animate="animation"
+            className="sliddingTextContainer"
+          >
+            Desenvolvedor · Músico · Sound Desingner
+          </motion.div>
+        )}
 
         <motion.div
           variants={imageVariants}

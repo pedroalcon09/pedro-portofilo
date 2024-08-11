@@ -7,7 +7,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
-const variants = {
+const variants = window.innerWidth > 767 ? {
   initial: {
     x: -500,
     opacity: 0,
@@ -20,7 +20,20 @@ const variants = {
       staggerChildren: 0.3,
     },
   },
-};
+} : {
+  initial: {
+    y: -300,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      staggerChildren: 0.3,
+    },
+  },
+}
 
 export const Contacts = () => {
   const ref = useRef();
@@ -115,7 +128,7 @@ export const Contacts = () => {
               whileInView={{ opacity: 0 }}
               transition={{ delay: 3, duration: 1 }}
             >
-              <svg width="450px" height="450px" viewBox="0 0 32.666 32.666">
+              <svg width="310px" height="310px" viewBox="0 0 31.666 32.666">
                 <motion.path
                   strokeWidth={0.2}
                   fill="none"

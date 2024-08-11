@@ -44,7 +44,7 @@ export const Parallax = ({ type }) => {
         }}
         className="planets"
       ></motion.div>
-      <motion.div style={{ x: yBg }} className="stars"></motion.div>
+      <motion.div style={window.innerWidth > 1000 ? { x: yBg } : { y: yBg }} className="stars"></motion.div>
     </div>
   );
 };
