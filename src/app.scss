@@ -35,15 +35,17 @@ section {
   section {
     height: 100vh !important;
     scroll-snap-align: center !important;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
   }
 }
 
 @media (min-width: 1200px) {
-    section {
-      height: 100vh !important;
-      scroll-snap-align: center !important;
-    }
+  section {
+    height: 100vh !important;
+    scroll-snap-align: center !important;
   }
+}
 
 @mixin mobile {
   @media (max-width: 767px) {
