@@ -7,33 +7,36 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
-const variants = window.innerWidth > 767 ? {
-  initial: {
-    x: -500,
-    opacity: 0,
-  },
-  animate: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.5,
-      staggerChildren: 0.3,
-    },
-  },
-} : {
-  initial: {
-    y: -300,
-    opacity: 0,
-  },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.5,
-      staggerChildren: 0.3,
-    },
-  },
-}
+const variants =
+  window.innerWidth > 767
+    ? {
+        initial: {
+          x: -500,
+          opacity: 0,
+        },
+        animate: {
+          x: 0,
+          opacity: 1,
+          transition: {
+            duration: 0.5,
+            staggerChildren: 0.3,
+          },
+        },
+      }
+    : {
+        initial: {
+          y: -300,
+          opacity: 0,
+        },
+        animate: {
+          y: 0,
+          opacity: 1,
+          transition: {
+            duration: 0.5,
+            staggerChildren: 0.3,
+          },
+        },
+      };
 
 export const Contacts = () => {
   const ref = useRef();
@@ -182,9 +185,9 @@ export const Contacts = () => {
               ></textarea>
               <button>Enviar</button>
             </motion.form>
-            {error === true && <div className="error_form">Error</div>}
+            {error === true && <div className="error_form">Erro</div>}
 
-            {success === true && <div className="success_form">Success</div>}
+            {success === true && <div className="success_form">Sucesso</div>}
           </Col>
         </Row>
       </Container>

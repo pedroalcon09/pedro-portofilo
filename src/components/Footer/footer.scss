@@ -1,0 +1,44 @@
+@import "../../app.scss";
+
+.footer {
+    background-color: #111 !important;
+    height: 10vh;
+    width: 100vw;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    .footer_container {
+        width: 85%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        img {
+            width: 60px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        h5 {
+            font-size: 15px;
+            text-align: center;
+            font-weight: 400;
+
+            @include desktop {
+                font-size: 17px;
+                letter-spacing: 3px;
+            }
+        }
+    }
+
+    img.scroll_btn {
+        width: 40px !important;
+
+        @include desktop {
+            width: 60px;
+        }
+    }
+}

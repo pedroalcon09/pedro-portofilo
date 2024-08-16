@@ -95,7 +95,7 @@
         font-size: 20px;
         cursor: pointer;
         margin-bottom: 20px;
-        margin-left: 20px;
+        margin-right: 20px;
 
         @include desktop {
           margin-bottom: 0px;
@@ -141,15 +141,15 @@
         right: 0vw;
       }
       @include largeDesktop {
-        width: 700px;
+        width: 500px;
         bottom: 5px;
         right: 5vw;
       }
 
       @include giantDesktop {
-        width: 875px;
+        width: 620px;
         bottom: 5px;
-        right: 5vw;
+        right: 15vw;
       }
     }
   }

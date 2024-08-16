@@ -7,6 +7,7 @@ import { Sobre } from "./components/Sobre/Sobre";
 import { Projects } from "./components/Projects/Projects";
 import { Contacts } from "./components/Contacts/Contacts";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Footer } from "./components/Footer/Footer";
 
 ["Home", "Serviços", "Portfólio", "Contatos", "Sobre"];
 
@@ -14,12 +15,12 @@ const App = () => {
   return (
     <div>
       <section id="Home">
-      <NavBar/>
-      <Hero/>
-    </section>
-    <section id="Sobre">
-      <Sobre/>
-    </section>
+        <NavBar />
+        <Hero />
+      </section>
+      <section id="Sobre">
+        <Sobre />
+      </section>
       <section id="Parallax1">
         <Parallax type="services" />
       </section>
@@ -34,6 +35,7 @@ const App = () => {
       </section>
       <section id="Contatos">
         <Contacts />
+        <Footer/>
       </section>
     </div>
   );

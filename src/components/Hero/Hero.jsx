@@ -132,7 +132,7 @@ export const Hero = () => {
         >
           <motion.img
             variants={imageVariants}
-            src="/hero_v2.png"
+            src="/hero_v5.png"
             alt="HERO-IMG"
           />
         </motion.div>
