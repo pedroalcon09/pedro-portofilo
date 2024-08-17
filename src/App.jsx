@@ -35,7 +35,7 @@ const App = () => {
       </section>
       <section id="Contatos">
         <Contacts />
-        <Footer/>
+        <Footer />
       </section>
     </div>
   );

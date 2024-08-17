@@ -6,12 +6,15 @@ import colorSharp from "../../imgs/color-sharp.png";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { ToastContainer, toast, Bounce } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 const variants =
   window.innerWidth > 767
     ? {
         initial: {
-          x: -500,
+          x: -300,
           opacity: 0,
         },
         animate: {
@@ -25,7 +28,7 @@ const variants =
       }
     : {
         initial: {
-          y: -300,
+          y: -10,
           opacity: 0,
         },
         animate: {
@@ -43,13 +46,28 @@ export const Contacts = () => {
 
   const formRef = useRef();
 
-  const [error, setError] = useState(null);
-  const [success, setSuccess] = useState(null);
-
   const isInView = useInView(ref, { margin: "-100px" });
+
+  const notifySuccess = () => {
+    toast.success("E-mail enviado!", {
+      theme: "dark",
+    });
+  };
+
+  const notifyError = () => {
+    toast.error("Algo deu errado... tente novamente", {
+      theme: "dark",
+    });
+  };
+
+  const [submitting, setSubmitting] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    const form = document.getElementById("email_form");
+
+    setSubmitting(true);
 
     emailjs
       .sendForm(
@@ -62,10 +80,12 @@ export const Contacts = () => {
       )
       .then(
         (result) => {
-          setSuccess(true);
+          notifySuccess();
+          setSubmitting(false);
+          form.reset();
         },
         (error) => {
-          setError(true);
+          notifyError();
         }
       );
   };
@@ -137,7 +157,7 @@ export const Contacts = () => {
                   fill="none"
                   initial={{ pathLength: 0 }}
                   transition={{ duration: 3 }}
-                  animate={isInView && { pathLength: 1 }}
+                  animate={isInView ? { pathLength: 1 } : { pathLength: 0 } }
                   d="M28.189,16.504h-1.666c0-5.437-4.422-9.858-9.856-9.858l-0.001-1.664C23.021,4.979,28.189,10.149,28.189,16.504z
             M16.666,7.856L16.665,9.52c3.853,0,6.983,3.133,6.981,6.983l1.666-0.001C25.312,11.735,21.436,7.856,16.666,7.856z M16.333,0
             C7.326,0,0,7.326,0,16.334c0,9.006,7.326,16.332,16.333,16.332c0.557,0,1.007-0.45,1.007-1.006c0-0.559-0.45-1.01-1.007-1.01
@@ -161,6 +181,7 @@ export const Contacts = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 4, duration: 1 }}
+              id="email_form"
             >
               <input
                 type="text"
@@ -183,14 +204,15 @@ export const Contacts = () => {
                 placeholder="Mensagem"
                 required
               ></textarea>
-              <button>Enviar</button>
+              <button disabled={submitting} className={submitting && 'disabled_btn'}>
+                Enviar
+                {submitting && <AiOutlineLoading3Quarters className="load-icon"/>}
+              </button>
             </motion.form>
-            {error === true && <div className="error_form">Erro</div>}
-
-            {success === true && <div className="success_form">Sucesso</div>}
           </Col>
         </Row>
       </Container>
+      <ToastContainer transition={Bounce} />
     </div>
   );
 };

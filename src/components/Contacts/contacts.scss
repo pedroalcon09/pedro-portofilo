@@ -23,6 +23,23 @@
     padding-bottom: 125px;
   }
 
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  
+  
+  .load-icon {
+    margin-left: 10px;
+    font-size: 20px;
+    animation: spin 2s linear infinite;
+  }
+
   .contactCont {
     width: 75%;
     margin-top: 30px;
@@ -197,6 +214,16 @@
       button {
         width: 100%;
         background-color: rgb(234, 0, 255);
+        border: none;
+        padding: 20px;
+        color: black;
+        font-weight: 600;
+        font-size: 18px;
+      }
+
+      button.disabled_btn {
+        width: 100%;
+        background-color: rgb(246, 142, 255);
         border: none;
         padding: 20px;
         color: black;

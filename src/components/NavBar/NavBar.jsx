@@ -5,7 +5,6 @@ import { SideBar } from "../SideBar/SideBar";
 import logoSmall from "../../imgs/logo_small.png";
 import logo1 from "../../imgs/logo1.png";
 
-
 export const NavBar = () => {
   const [open, setOpen] = useState(false);
 
@@ -39,9 +38,25 @@ export const NavBar = () => {
         >
           {socials.map((item, i) => (
             <motion.li variants={variants} key={item.name} custom={i} href="#">
-              <a href={item.url} target="_blank">
-                <img src={`/${item.name}.png`} alt={item.name + "-LOGO"} />
-              </a>
+              <motion.a href={item.url} target="_blank">
+                <motion.img
+                  src={`/${item.name}.png`}
+                  alt={item.name + "-LOGO"}
+                  initial={{
+                    scale:
+                      item.name === "linkedin" || item.name === "github"
+                        ? 1.4
+                        : 1.0,
+                  }}
+                  whileHover={{
+                    scale:
+                      item.name === "linkedin" || item.name === "github"
+                        ? 1.8
+                        : 1.2,
+                  }}
+                  whileTap={{ scale: 0.8 }}
+                />
+              </motion.a>
             </motion.li>
           ))}
         </motion.ul>
