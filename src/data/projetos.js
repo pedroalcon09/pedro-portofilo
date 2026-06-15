@@ -1,6 +1,22 @@
 export const projetos = {
     FRONT: [
       {
+        id: 13,
+        title: "Cataisa Radiônica",
+        img: "../imgs/radionica.png",
+        description:
+          "Feito com react e claude, um site de portfolio para uma radiestesista.",
+        link: "https://www.catalisaradionica.com.br/"
+      },
+      {
+        id: 14,
+        title: "Builtgrid WebApp",
+        img: "../imgs/bgd-app.png",
+        description:
+          "Participação no desenvolvimento a partir de 2022, utilizando wappler e inúmeras livrarias. Um webApp para conexão entre fornecedores e construtores na Australia.",
+        link: "https://builtgrid.com/"
+      },
+      {
         id: 1,
         title: "Torre de Hanói",
         img: "../imgs/hanoi.png",
@@ -75,14 +91,6 @@ export const projetos = {
     ],
     BACKEND: [
       {
-        id: 20,
-        title: "BuiltGrid Network",
-        img: "../imgs/bgd.png",
-        description:
-          "Projeto da BuiltGrid. Usado para listar fornecedores para construtores civis na Australia.",
-        link: "https://search.builtgrid.com/",
-      },
-      {
         id: 14,
         title: "Produtos e categorias",
         img: '../imgs/prodCat.jpg',
@@ -148,4 +156,3 @@ export const projetos = {
       }
     ]
   };
-  

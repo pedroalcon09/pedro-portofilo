@@ -26,7 +26,7 @@ export const Projects = () => {
                 id="pills-tab"
               >
                 <Nav.Item>
-                  <Nav.Link eventKey="first">Front End</Nav.Link>
+                  <Nav.Link eventKey="first">Full-Stack</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
                   <Nav.Link eventKey="second">Back End</Nav.Link>
