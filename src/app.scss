@@ -33,7 +33,7 @@ section {
     scroll-behavior: smooth;
   }
   section {
-    height: 100vh !important;
+    min-height: 100vh !important;
     scroll-snap-align: center !important;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
@@ -42,7 +42,7 @@ section {
 
 @media (min-width: 1200px) {
   section {
-    height: 100vh !important;
+    min-height: 100vh !important;
     scroll-snap-align: center !important;
   }
 }

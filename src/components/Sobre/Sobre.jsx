@@ -35,10 +35,12 @@ export const Sobre = () => {
           <div className="line-div" />
         </div>
         <p>
-          Tenho 26 anos, sou de São Paulo capital, trabalho como desenvolvedor
-          full-stack há 2 anos após uma adição de carreira. Sou formado em
-          Produção Musical pela Anhembi Morumbi e em Programação pela Kenzie
-          Academy.
+          Tenho 27 anos e atuo como desenvolvedor full-stack há 4 anos, após uma
+          transição de carreira para a área de tecnologia. Sou formado em
+          Programação pela Kenzie Academy e também em Produção Musical pela
+          Universidade Anhembi Morumbi. Ao longo da minha trajetória, participei
+          de projetos que envolveram desde o desenvolvimento de interfaces até a
+          construção de APIs, bancos de dados e processos de implantação.
         </p>
       </div>
       <motion.div
@@ -71,10 +73,7 @@ export const Sobre = () => {
           );
         })}
       </motion.div>
-      <motion.div
-        style={{ y: yBg }}
-        className="stars"
-      ></motion.div>
+      <motion.div style={{ y: yBg }} className="stars"></motion.div>
     </div>
   );
 };

@@ -26,7 +26,7 @@ export const Footer = () => {
     <div className="footer">
       <div className="footer_container">
         <img src={logoSmall} alt="Pedro-Alcon-Logo" />
-        <h5>Copyright © 2024 Pedro Alcon · Design Pedro Alcon</h5>
+        <h5>Copyright © 2026 Pedro Alcon · Design Pedro Alcon</h5>
         <motion.a variants={textVariants} animate="scrollButton" href="#Home">
           <motion.img
             className="scroll_btn"

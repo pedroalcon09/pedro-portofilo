@@ -16,24 +16,16 @@ export const projetos = {
           "Participação no desenvolvimento a partir de 2022, utilizando wappler e inúmeras livrarias. Um webApp para conexão entre fornecedores e construtores na Australia.",
         link: "https://builtgrid.com/"
       },
-      {
-        id: 1,
-        title: "Torre de Hanói",
-        img: "../imgs/hanoi.png",
-        description:
-          "Feito com DOM e JavaScript.",
-        link: "https://kenzie-academy-brasil-developers.github.io/m2-entrega-torre-de-hanoi-sprint-1a-pedroalcon09/",
-        repo: "https://github.com/pedroalcon09/m2-entrega-torre-de-hanoi-sprint-1a-pedroalcon09",
-      },
-      {
-        id: 5,
-        title: "Jogo da Velha",
-        img: "../imgs/velha.png",
-        description:
-          "Feito com DOM, um jogo da velha bem simples e funcional.",
-        link: "https://pedroalcon09.github.io/atividade-jogo-da-velha-sprint-1-pedroalcon09/",
-        repo: "https://github.com/pedroalcon09/atividade-jogo-da-velha-sprint-1-pedroalcon09",
-      },
+      // {
+      //   id: 1,
+      //   title: "Torre de Hanói",
+      //   img: "../imgs/hanoi.png",
+      //   description:
+      //     "Feito com DOM e JavaScript.",
+      //   link: "https://kenzie-academy-brasil-developers.github.io/m2-entrega-torre-de-hanoi-sprint-1a-pedroalcon09/",
+      //   repo: "https://github.com/pedroalcon09/m2-entrega-torre-de-hanoi-sprint-1a-pedroalcon09",
+      // },
+     
       {
         id: 6,
         title: "Kenzie Hub",
@@ -52,6 +44,15 @@ export const projetos = {
         link: "https://diskenzietrademusic.vercel.app/home",
         repo: "https://github.com/pedroalcon09/capstone-m3-dtm",
       },
+       {
+        id: 5,
+        title: "Jogo da Velha",
+        img: "../imgs/velha.png",
+        description:
+          "Feito com DOM, um jogo da velha bem simples e funcional.",
+        link: "https://pedroalcon09.github.io/atividade-jogo-da-velha-sprint-1-pedroalcon09/",
+        repo: "https://github.com/pedroalcon09/atividade-jogo-da-velha-sprint-1-pedroalcon09",
+      },
       {
         id: 9,
         title: "Páginas de personagens",
@@ -61,15 +62,15 @@ export const projetos = {
         link: "https://buscando-personagens-rick-morty.vercel.app/",
         repo: "https://github.com/pedroalcon09/react-atividade-s1-buscando-mais-personagens-pedroalcon09",
       },
-      {
-        id: 10,
-        title: "Burguer Kenzie",
-        img: "../imgs/kenzie-burguer.png",
-        description:
-          " Esse projeto foi feito tambem com react puro, mas já envolve o consumo de APIs mais bem formatadas.",
-        link: "https://m3-sp1b-atvd16.vercel.app/",
-        repo: "https://github.com/pedroalcon09/react-entrega-s1-hamburgueria-da-kenzie-pedroalcon09",
-      },
+      // {
+      //   id: 10,
+      //   title: "Burguer Kenzie",
+      //   img: "../imgs/kenzie-burguer.png",
+      //   description:
+      //     " Esse projeto foi feito tambem com react puro, mas já envolve o consumo de APIs mais bem formatadas.",
+      //   link: "https://m3-sp1b-atvd16.vercel.app/",
+      //   repo: "https://github.com/pedroalcon09/react-entrega-s1-hamburgueria-da-kenzie-pedroalcon09",
+      // },
       {
         id: 11,
         title: "Nu Kenzie",
