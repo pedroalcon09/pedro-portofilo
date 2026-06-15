@@ -103,7 +103,7 @@ pedro-portofilo/
 ## Dados (src/data/)
 
 ### `skills.js`
-Array com 13 habilidades: JavaScript, CSS3, Python, React, PostgreSQL, Django, HTML5, Jest, Node.js, Leaflet, Bootstrap, Git, Sass. Cada item tem nome, ícone (React Icons) e descrição curta.
+Array com 30 habilidades técnicas. Cada item tem nome (`tech`), ícone (`icon` — nome do componente React Icons como string) e descrição curta. O componente `Skills.jsx` usa um `iconMap` para mapear a string ao componente real.
 
 ### `projetos.js`
 Projetos organizados em 4 categorias usadas nas abas da seção Projects:
@@ -118,4 +118,9 @@ Cada projeto contém: título, imagem, descrição, link ao vivo e link do repos
 
 ## Deploy
 
-O projeto é hospedado no **Vercel**. A pasta `.vercel/` e `dist/` estão no `.gitignore`. O deploy acontece automaticamente via push para o repositório conectado.
+- **URL de produção:** https://pedro-alcon-portofilo.vercel.app/
+- **Plataforma:** Vercel, conectado ao repositório GitHub `pedroalcon09/pedro-portofilo`
+- **Branch de produção:** `starter`
+- **Deploy automático:** qualquer `git push origin starter` dispara um novo deploy automaticamente no Vercel — não é necessário nenhum comando extra.
+- **Deploy manual:** acesse o [dashboard do Vercel](https://vercel.com), entre no projeto e clique em **Redeploy** para republicar o último commit sem precisar fazer push.
+- As pastas `.vercel/` e `dist/` estão no `.gitignore` e não devem ser commitadas.
