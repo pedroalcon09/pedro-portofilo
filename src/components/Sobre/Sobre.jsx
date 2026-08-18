@@ -35,7 +35,7 @@ export const Sobre = () => {
           <div className="line-div" />
         </div>
         <p>
-          Tenho 27 anos e atuo como desenvolvedor full-stack há 4 anos, após uma
+          Tenho 28 anos e atuo como desenvolvedor full-stack há 4 anos, após uma
           transição de carreira para a área de tecnologia. Sou formado em
           Programação pela Kenzie Academy e também em Produção Musical pela
           Universidade Anhembi Morumbi. Ao longo da minha trajetória, participei
