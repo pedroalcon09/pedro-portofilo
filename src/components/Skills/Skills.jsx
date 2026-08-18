@@ -35,6 +35,8 @@ import {
   SiGooglemaps,
 } from "react-icons/si";
 import { MdWeb } from "react-icons/md";
+import { ClaudeCodeIcon } from "./ClaudeCodeIcon";
+import { LovableIcon } from "./LovableIcon";
 import colorSharp2 from "../../imgs/color-sharp2.png";
 import colorSharp from "../../imgs/color-sharp.png";
 
@@ -97,6 +99,8 @@ export const Skills = () => {
     SiCloudflare,
     SiGooglemaps,
     MdWeb,
+    ClaudeCodeIcon,
+    LovableIcon,
   };
 
   

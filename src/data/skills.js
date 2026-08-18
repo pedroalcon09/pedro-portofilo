@@ -149,4 +149,14 @@ export const skills = [
     icon: 'SiGooglemaps',
     description: 'APIs do Google para integrar mapas, rotas e geolocalização em aplicações.'
   },
+  {
+    tech: 'Claude Code',
+    icon: 'ClaudeCodeIcon',
+    description: 'Agente de codificação da Anthropic usado diretamente no terminal para acelerar o desenvolvimento.'
+  },
+  {
+    tech: 'Lovable',
+    icon: 'LovableIcon',
+    description: 'Plataforma de desenvolvimento com IA para prototipar e construir aplicações rapidamente.'
+  }
 ];
